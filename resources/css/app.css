@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'MagistralRegular';
+  src: url('../fonts/Magistral-Black-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MagistralThin';
+  src: url('../fonts/Magistral-Regular.otf') format('opentype');
+  font-style: normal;
+}
+
+/* Optional global font override */
+.magistral {
+  font-family: 'MagistralRegular', sans-serif;
+}
+
+.magistral-thin {
+  font-family: 'MagistralThin', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
