@@ -7,10 +7,9 @@
     'link' => '#',
 ])
 
-<div
-    class="relative flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group hover:scale-105 ">
+<div class="relative flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group">
     <a href="{{ route($link) }}"
-        class="relative z-10 overflow-hidden w-fit px-8 py-4 flex items-center justify-center font-medium text-black group bg-{{ $bgcolor }}  transition duration-300">
+        class="relative z-10 overflow-hidden w-fit px-8 py-4 flex items-center justify-center font-medium text-black group bg-{{ $bgcolor }} transition duration-300">
         <span class="font-light text-{{ $textcolor }} poppins-regular">
             {{ $text }}
         </span>

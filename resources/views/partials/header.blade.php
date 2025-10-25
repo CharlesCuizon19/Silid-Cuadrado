@@ -30,8 +30,8 @@
                 <a href="{{ route('about_us') }}"
                     class="transition hover:text-[#f37021] poppins-regular {{ Route::is('about_us') ? 'font-bold text-[#f37021]' : 'font-light' }}">About
                     Us</a>
-                <a href="{{ route('products') }}"
-                    class="transition hover:text-[#f37021] poppins-regular {{ Route::is('products') ? 'font-bold text-[#f37021]' : 'font-light' }}">Products</a>
+                <a href="{{ route('products.show') }}"
+                    class="transition hover:text-[#f37021] poppins-regular {{ Route::is('products.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Products</a>
                 <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Services</a>
                 <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Projects</a>
             </div>

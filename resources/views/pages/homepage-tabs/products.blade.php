@@ -1,18 +1,22 @@
 @php
     $products = [
         (object) [
+            'id' => 1,
             'name' => 'Panel Boards',
             'img' => 'images/product1.png',
         ],
         (object) [
+            'id' => 2,
             'name' => 'Cable Trays',
             'img' => 'images/product2.png',
         ],
         (object) [
+            'id' => 3,
             'name' => 'Pull Boxes',
             'img' => 'images/product3.png',
         ],
         (object) [
+            'id' => 4,
             'name' => 'Panel Boards',
             'img' => 'images/product3.png',
         ],
@@ -31,7 +35,7 @@
                         <div class="text-5xl text-white magistral w-[50%] leading-tight">
                             Reliable Products Built for Strength and Function
                         </div>
-                        <x-button border='border-black' link="homepage" text="All Products" textcolor="black"
+                        <x-button border='border-black' link="products.show" text="All Products" textcolor="black"
                             bgcolor="white" bghovercolor="bg-[#c7c7c7]" />
                     </div>
                     <div class="grid items-end h-full grid-cols-7">
@@ -58,7 +62,8 @@
                             <div class="swiper myProductsSwiper max-w-[100%]">
                                 <div class="swiper-wrapper">
                                     @foreach ($products as $item)
-                                        <div class="swiper-slide">
+                                        <a href="{{ route('products.singlepage', ['id' => $item->id]) }}"
+                                            class="swiper-slide">
                                             <div class="flex flex-col gap-5 cursor-pointer group">
                                                 <div class="relative h-auto w-[414px]">
                                                     <div class="overflow-hidden">
@@ -91,7 +96,7 @@
                                                     {{ $item->name }}
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     @endforeach
                                 </div>
                             </div>

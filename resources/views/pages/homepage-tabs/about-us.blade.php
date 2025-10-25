@@ -18,7 +18,7 @@
                     projects
                     designed for strength, precision, and reliability.
                 </div>
-                <x-button border='border-black' link="homepage" text="More About Us" textcolor="white"
+                <x-button border='border-black' link="about_us" text="More About Us" textcolor="white"
                     bgcolor="[#f37021]" bghovercolor="[#a63e00]" />
             </div>
         </div>

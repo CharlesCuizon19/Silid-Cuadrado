@@ -2,18 +2,18 @@
 
 @php
     $products = [
-        (object) ['name' => 'Panel Boards', 'img' => 'images/product1.png'],
-        (object) ['name' => 'Cable Trays', 'img' => 'images/product2.png'],
-        (object) ['name' => 'Pull Boxes', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Switch Gears', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Breaker Panels', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Lighting Fixtures', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Control Panels', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Enclosures', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Power Cabinets', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Panel Boards 2', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Cable Trays 2', 'img' => 'images/product3.png'],
-        (object) ['name' => 'Pull Boxes 2', 'img' => 'images/product3.png'],
+        (object) ['id' => 1, 'name' => 'Panel Boards', 'img' => 'images/product1.png'],
+        (object) ['id' => 2, 'name' => 'Cable Trays', 'img' => 'images/product2.png'],
+        (object) ['id' => 3, 'name' => 'Pull Boxes', 'img' => 'images/product3.png'],
+        (object) ['id' => 4, 'name' => 'Switch Gears', 'img' => 'images/product3.png'],
+        (object) ['id' => 5, 'name' => 'Breaker Panels', 'img' => 'images/product3.png'],
+        (object) ['id' => 6, 'name' => 'Lighting Fixtures', 'img' => 'images/product3.png'],
+        (object) ['id' => 7, 'name' => 'Control Panels', 'img' => 'images/product3.png'],
+        (object) ['id' => 8, 'name' => 'Enclosures', 'img' => 'images/product3.png'],
+        (object) ['id' => 9, 'name' => 'Power Cabinets', 'img' => 'images/product3.png'],
+        (object) ['id' => 10, 'name' => 'Panel Boards 2', 'img' => 'images/product3.png'],
+        (object) ['id' => 11, 'name' => 'Cable Trays 2', 'img' => 'images/product3.png'],
+        (object) ['id' => 12, 'name' => 'Pull Boxes 2', 'img' => 'images/product3.png'],
     ];
 
     // Split products into groups of 9
@@ -118,7 +118,7 @@
                                     <div class="swiper-slide">
                                         <div class="grid grid-cols-3 gap-5 mt-10 gap-y-14">
                                             @foreach ($chunk as $item)
-                                                <div>
+                                                <a href="{{ route('products.singlepage', ['id' => $item->id]) }}">
                                                     <div class="flex flex-col gap-5 cursor-pointer group">
                                                         <div class="relative w-[500px] h-auto">
                                                             <div class="overflow-hidden">
@@ -151,7 +151,7 @@
                                                             {{ $item->name }}
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </a>
                                             @endforeach
                                         </div>
                                     </div>
