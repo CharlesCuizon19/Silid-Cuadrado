@@ -25,16 +25,20 @@
         <!-- Desktop Navigation -->
         <nav class="items-center hidden space-x-8 md:flex ">
             <div class="items-center hidden space-x-12 md:flex">
-                <a href="#"
-                    class="text-[#f37021] poppins-regular {{ Route::is('homepage') ? 'font-bold' : 'font-light' }}">Home</a>
-                <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">About Us</a>
-                <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Products</a>
+                <a href="{{ route('homepage') }}"
+                    class="transition hover:text-[#f37021] poppins-regular {{ Route::is('homepage') ? 'font-bold text-[#f37021]' : 'font-light' }}">Home</a>
+                <a href="{{ route('about_us') }}"
+                    class="transition hover:text-[#f37021] poppins-regular {{ Route::is('about_us') ? 'font-bold text-[#f37021]' : 'font-light' }}">About
+                    Us</a>
+                <a href="{{ route('products') }}"
+                    class="transition hover:text-[#f37021] poppins-regular {{ Route::is('products') ? 'font-bold text-[#f37021]' : 'font-light' }}">Products</a>
                 <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Services</a>
                 <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Projects</a>
             </div>
             <!-- Right Side (desktop) -->
             <div class="items-center hidden space-x-8 md:flex">
-                <x-button text="Contact Us" color="white" link="homepage" />
+                <x-button border='border-white' link="homepage" text="Contact Us" textcolor="white" bgcolor="[#f37021]"
+                    bghovercolor="[#f37021]/20" />
                 <button class="text-white transition hover:text-[#f37021]">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -61,7 +65,8 @@
             <a href="#" class="text-lg hover:text-[#f37021] transition">Projects</a>
 
             <div class="pt-4">
-                <x-button text="Contact Us" color="white" link="homepage" />
+                <x-button border='border-white' link="homepage" text="Contact Us" textcolor="white" bgcolor="[#f37021]"
+                    bghovercolor="bg-[#a63e00]" />
             </div>
         </div>
     </nav>

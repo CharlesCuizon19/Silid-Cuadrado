@@ -10,6 +10,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MagistralMedium';
+  src: url('../fonts/Magistral-Bold.otf') format('opentype');
+  font-style: normal;
+}
+
 /* Optional global font override */
 .magistral {
   font-family: 'MagistralRegular', sans-serif;
@@ -17,6 +23,10 @@
 
 .magistral-thin {
   font-family: 'MagistralThin', sans-serif;
+}
+
+.magistral-medium {
+  font-family: 'MagistralMedium', sans-serif;
 }
 
 @tailwind base;

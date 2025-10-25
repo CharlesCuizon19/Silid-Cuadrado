@@ -54,7 +54,8 @@
                             {{ $item->slogan }}
                         </div>
 
-                        <x-button text="Explore Services" color="white" link="homepage" padding="500px" />
+                        <x-button border='border-white' link="homepage" text="Explore Services" textcolor="white"
+                            bgcolor="[#f37021]" bghovercolor="bg-[#a63e00]" />
                     </div>
                 </div>
             </div>

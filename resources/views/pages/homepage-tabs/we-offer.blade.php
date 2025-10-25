@@ -23,7 +23,7 @@
     ];
 @endphp
 
-<div class="py-10 bg-white">
+<div class="py-10">
     <div class="container h-full mx-auto">
         <div class="relative grid grid-cols-4 gap-5">
             <div class="flex flex-col col-span-3 gap-8">
@@ -58,7 +58,7 @@
 
                                     <div class="flex flex-col items-start justify-start gap-5">
                                         <div
-                                            class="text-2xl font-bold magistral-thin group-hover:text-[#f37021] transition duration-300">
+                                            class="text-2xl font-bold magistral-medium group-hover:text-[#f37021] transition duration-300">
                                             {{ $item->title }}
                                         </div>
                                         <div class="poppins-regular text-black/70 line-clamp-2">
