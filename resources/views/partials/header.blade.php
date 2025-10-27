@@ -8,7 +8,7 @@
 
         <!-- Logo -->
         <a href="/" class="z-50 flex items-center space-x-3">
-            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-auto h-10">
+            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-[458px] h-auto">
         </a>
 
         <!-- Burger button (mobile only) -->
@@ -32,7 +32,8 @@
                     Us</a>
                 <a href="{{ route('products.show') }}"
                     class="transition hover:text-[#f37021] poppins-regular {{ Route::is('products.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Products</a>
-                <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Services</a>
+                <a href="{{ route('services.show') }}"
+                    class="transition hover:text-[#f37021] poppins-regular {{ Route::is('services.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Services</a>
                 <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Projects</a>
             </div>
             <!-- Right Side (desktop) -->

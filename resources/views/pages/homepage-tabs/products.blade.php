@@ -62,7 +62,7 @@
                             <div class="swiper myProductsSwiper max-w-[100%]">
                                 <div class="swiper-wrapper">
                                     @foreach ($products as $item)
-                                        <a href="{{ route('products.singlepage', ['id' => $item->id]) }}"
+                                        <a href="{{ route('products.details', ['id' => $item->id]) }}"
                                             class="swiper-slide">
                                             <div class="flex flex-col gap-5 cursor-pointer group">
                                                 <div class="relative h-auto w-[414px]">

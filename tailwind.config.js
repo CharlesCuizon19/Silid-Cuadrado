@@ -6,11 +6,7 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {
-            fontFamily: {
-                magistral: ["MyCustomFont", "sans-serif"],
-            },
-        },
+        extend: {},
     },
     plugins: [],
 };
