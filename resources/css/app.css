@@ -41,3 +41,19 @@
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
+
+.count-up {
+    align-items: baseline;
+    font-variant-numeric: tabular-nums;
+}
+
+.count-up .count-value {
+    transition: color 0.3s ease;
+}
+
+.count-up .count-suffix {
+    margin-left: 2px;
+    font-size: 0.8em;
+    color: #000; /* inherits the same color unless overridden */
+}
+

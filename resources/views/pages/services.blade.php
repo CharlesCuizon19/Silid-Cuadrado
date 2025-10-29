@@ -5,12 +5,12 @@
     <div>
         <x-banner page='Our Services' extension1=">" breadcrumb1='Services' img='images/services-banner.png' />
 
-        <div class="container h-full pt-20 mx-auto pb-36">
+        <div class="container h-full pt-20 mx-auto pb-36" data-aos="zoom-in">
             <div class="grid grid-cols-3 gap-5 mt-10 gap-y-16 gap-x-10">
                 @foreach ($paginatedServices as $item)
-                    <div>
+                    <a href="{{ route('services.details', ['id' => $item->id]) }}">
                         <div class="flex flex-col justify-between h-full gap-5 cursor-pointer group">
-                            <img src="{{ asset($item->img) }}" alt="" class="w-20 h-auto spin-y-hover">
+                            <img src="{{ asset($item->img) }}" alt="" class="h-auto w-28 spin-y-hover">
 
                             <div class="flex flex-col items-start justify-start gap-5">
                                 <div
@@ -20,21 +20,21 @@
                                 <div class="poppins-regular text-black/70 line-clamp-2">
                                     {{ $item->description }}
                                 </div>
-                                <a href="{{ route('services.details', ['id' => $item->id]) }}"
-                                    class="flex group/button items-center gap-3 font-bold poppins-regular text-[#f37021] hover:scale-105 transition duration-300">
+                                <div
+                                    class="flex group items-center gap-3 font-bold poppins-regular text-[#f37021] transition duration-300">
                                     <div>
                                         View Details
                                     </div>
-                                    <div class="transition ease-in-out group-hover/button:translate-x-2">
+                                    <div class="transition ease-in-out group-hover:translate-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-8">
                                             <path fill="none" stroke="currentColor" stroke-linecap="round"
                                                 stroke-linejoin="round" stroke-width="2" d="m10 17l5-5l-5-5" />
                                         </svg>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 @endforeach
             </div>
 

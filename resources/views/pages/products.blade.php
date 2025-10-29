@@ -13,7 +13,7 @@
                     </div>
 
                     {{-- Filter + Sort + Search --}}
-                    <div class="flex justify-between">
+                    <div class="flex justify-between" data-aos="zoom-in">
                         <div class="flex gap-2">
                             {{-- Category Dropdown --}}
                             <div x-data="multiSelect()" class="relative">
@@ -94,7 +94,7 @@
                     </div>
 
                     {{-- Product Grid --}}
-                    <div class="grid grid-cols-3 gap-5 mt-10 gap-y-14">
+                    <div class="grid grid-cols-3 gap-5 mt-10 gap-y-14" data-aos="zoom-in">
                         @foreach ($products as $item)
                             <a href="{{ route('products.details', ['id' => $item->id]) }}">
                                 <div class="flex flex-col gap-5 cursor-pointer group">

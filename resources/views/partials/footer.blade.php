@@ -1,23 +1,29 @@
 <div>
     <div class="flex flex-col">
         <div class="relative z-10 border border-black bg-[#191718]">
-            <img src="{{ asset('images/footer-rectangle.png') }}" alt="" class="object-cover w-full h-full">
+            <div class="h-[20rem] 2xl:h-auto">
+                <img src="{{ asset('images/footer-rectangle.png') }}" alt=""
+                    class="object-cover object-left w-full h-full">
+            </div>
 
-            <div class="absolute inset-0 z-20 w-full h-full">
+            <div class="absolute bottom-0 z-20 w-full h-full mx-3 2xl:inset-0 2xl:mx-0">
                 <div class="container h-full mx-auto">
-                    <div class="flex justify-end h-full mt-20">
-                        <div class="flex flex-col gap-5 w-[50%]">
-                            <div class="uppercase text-[#f37021] text-lg poppins-regular font-bold">
+                    <div class="flex justify-end h-full" data-aos="fade-left">
+                        <div class="flex flex-col gap-2 2xl:gap-5 2xl:w-[50%] mt-20">
+                            <div class="uppercase text-[#f37021] text-sm 2xl:text-lg poppins-regular font-bold">
                                 Contact us
                             </div>
-                            <div class="text-5xl leading-tight text-white magistral w-[70%]">
+                            <div class="text-2xl 2xl:text-5xl leading-tight text-white magistral 2xl:w-[70%]">
                                 Let's Build Your Next Project Together
                             </div>
-                            <div class="text-lg font-light leading-tight text-white poppins-regular w-[65%] mb-5">
+                            <div
+                                class="text-sm 2xl:text-lg font-light leading-tight text-white poppins-regular 2xl:w-[65%] mb-5">
                                 Get in touch with us today for inquiries, consultations, or project quotations.
                             </div>
-                            <x-button border='border-white' link="homepage" text="Contact Us" textcolor="white"
-                                bgcolor="[#f37021]" bghovercolor="[#f37021]/20" />
+                            <div class="mx-3 2xl:mx-0">
+                                <x-button border='border-white' link="contact-us" text="Contact Us" textcolor="white"
+                                    bgcolor="[#f37021]" bghovercolor="[#f37021]/20" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -26,16 +32,17 @@
         </div>
 
         <div class="bg-[#121212] pt-10">
-            <div class="flex flex-col">
+            <div class="flex flex-col mx-3 2xl:mx-0">
                 <div class="container mx-auto">
-                    <div class="grid grid-cols-6 pb-10 text-white border-b border-white/20 poppins-regular">
-                        <div class="grid grid-cols-2 col-span-4 gap-12">
+                    <div class="grid pb-10 text-white border-b 2xl:grid-cols-6 border-white/20 poppins-regular">
+                        <div class="grid grid-cols-1 col-span-6 gap-12 2xl:grid-cols-2 2xl:col-span-4"
+                            data-aos="fade-right">
                             <div class="flex flex-col justify-between">
                                 <div class="flex flex-col gap-5">
                                     <div>
                                         <img src="{{ asset('images/logo.png') }}" alt="">
                                     </div>
-                                    <div class="leading-tight">
+                                    <div class="text-sm leading-tight 2xl:text-base">
                                         Building strength and shaping spaces through steel fabrication and interior
                                         fit-out
                                         solutions.
@@ -101,7 +108,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-3">
+                                <div class="flex items-center gap-3 mt-5 text-sm 2xl:mt-0 2xl:text-base">
                                     <div>
                                         Terms & Conditions
                                     </div>
@@ -117,33 +124,33 @@
                                 <div class="col-span-2 text-lg font-bold">
                                     Quick Links
                                 </div>
-                                <div class="grid grid-cols-2 col-span-2 font-light">
+                                <div class="grid grid-cols-2 col-span-2 text-sm font-light 2xl:text-base">
                                     <div class="flex flex-col gap-3">
                                         <div class="space-x-1">
                                             <span class="text-[#f37021]">></span>
-                                            <a href="#">Home</a>
+                                            <a href="{{ route('homepage') }}">Home</a>
                                         </div>
                                         <div class="space-x-1">
                                             <span class="text-[#f37021]">></span>
-                                            <a href="#">About Us</a>
+                                            <a href="{{ route('about_us') }}">About Us</a>
                                         </div>
                                         <div class="space-x-1">
                                             <span class="text-[#f37021]">></span>
-                                            <a href="#">Products</a>
+                                            <a href="{{ route('products.show') }}">Products</a>
                                         </div>
                                     </div>
                                     <div class="flex flex-col gap-3">
                                         <div class="space-x-1">
                                             <span class="text-[#f37021]">></span>
-                                            <a href="#">Services</a>
+                                            <a href="{{ route('services.show') }}">Services</a>
                                         </div>
                                         <div class="space-x-1">
                                             <span class="text-[#f37021]">></span>
-                                            <a href="#">Projects</a>
+                                            <a href="{{ route('projects.show') }}">Projects</a>
                                         </div>
                                         <div class="space-x-1">
                                             <span class="text-[#f37021]">></span>
-                                            <a href="#">Contact Us</a>
+                                            <a href="{{ route('contact-us') }}">Contact Us</a>
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +159,7 @@
                                         <div class="text-lg font-bold">
                                             Get in Touch
                                         </div>
-                                        <div class="flex items-center gap-2 font-light">
+                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">
@@ -168,7 +175,7 @@
                                                 Bacoor Cavite , Bacoor, Philippines, 4102
                                             </div>
                                         </div>
-                                        <div class="flex items-center gap-2 font-light">
+                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">
@@ -180,7 +187,7 @@
                                                 09 123456789
                                             </div>
                                         </div>
-                                        <div class="flex items-center gap-2 font-light">
+                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">
@@ -192,7 +199,7 @@
                                                 09 987654321
                                             </div>
                                         </div>
-                                        <div class="flex items-center gap-2 font-light">
+                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">>
@@ -208,16 +215,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="relative z-10 h-full col-span-2 ">
-                            <div class="absolute z-20 -top-[10rem]">
-                                <div class="flex flex-col gap-5 px-7 py-9 bg-[#f37021] h-full">
-                                    <div class="text-lg font-bold text-black uppercase poppins-regular">
+                        <div class="z-10 h-full col-span-6 mt-5 2xl:relative 2xl:col-span-2 2xl:mt-0"
+                            data-aos="fade-left">
+                            <div class="2xl:absolute z-20 -top-[10rem]">
+                                <div class="flex flex-col gap-5 px-7 py-12 bg-[#f37021] h-full">
+                                    <div class="text-sm font-bold text-black uppercase 2xl:text-lg poppins-regular">
                                         stay updated
                                     </div>
-                                    <div class="text-4xl leading-relaxed text-white magistral">
+                                    <div class="text-2xl leading-relaxed text-white 2xl:text-4xl magistral">
                                         Subscribe to Receive Updates and Insights on our Latest Projects
                                     </div>
-                                    <div class="text-lg font-light text-white">
+                                    <div class="text-sm font-light text-white 2xl:text-lg">
                                         Email Address
                                     </div>
                                     <input type="text"
@@ -228,14 +236,14 @@
                                             textcolor="white" />
                                     </div>
                                     <img src="{{ asset('images/footer-absolute.png') }}" alt=""
-                                        class="absolute bottom-0 right-0 z-30 mix-blend-multiply opacity-20">
+                                        class="absolute bottom-0 right-0 z-30 hidden mix-blend-multiply opacity-20 2xl:flex">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="py-10 font-light text-center text-white/50 poppins-regular">
+                <div class="py-10 text-sm font-light text-center text-white/50 poppins-regular 2xl:text-base">
                     © 2025 SILID CUADRADO. All Rights Reserved. Designed and Developed by <a
                         href="https://rwebsolutions.com.ph/" class="text-[#f37021] font-bold hover:underline">R Web
                         Solutions, Corp.</a>

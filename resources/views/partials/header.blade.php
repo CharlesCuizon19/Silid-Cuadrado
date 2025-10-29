@@ -8,7 +8,7 @@
 
         <!-- Logo -->
         <a href="/" class="z-50 flex items-center space-x-3">
-            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-[458px] h-auto">
+            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-[300px] 2xl:w-[458px] h-auto">
         </a>
 
         <!-- Burger button (mobile only) -->
@@ -34,12 +34,13 @@
                     class="transition hover:text-[#f37021] poppins-regular {{ Route::is('products.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Products</a>
                 <a href="{{ route('services.show') }}"
                     class="transition hover:text-[#f37021] poppins-regular {{ Route::is('services.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Services</a>
-                <a href="#" class="transition hover:text-[#f37021] poppins-regular font-light">Projects</a>
+                <a href="{{ route('projects.show') }}"
+                    class="transition hover:text-[#f37021] poppins-regular {{ Route::is('projects.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Projects</a>
             </div>
             <!-- Right Side (desktop) -->
             <div class="items-center hidden space-x-8 md:flex">
-                <x-button border='border-white' link="homepage" text="Contact Us" textcolor="white" bgcolor="[#f37021]"
-                    bghovercolor="[#f37021]/20" />
+                <x-button border='border-white' link="contact-us" text="Contact Us" textcolor="white"
+                    bgcolor="[#f37021]" bghovercolor="[#f37021]/20" />
                 <button class="text-white transition hover:text-[#f37021]">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -58,12 +59,18 @@
         x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-4"
         class="absolute top-0 left-0 z-40 w-full bg-black/95 backdrop-blur-md md:hidden">
-        <div class="flex flex-col items-center justify-center h-screen space-y-6">
-            <a href="#" class="text-lg font-semibold text-[#f37021] hover:text-white transition">Home</a>
-            <a href="#" class="text-lg hover:text-[#f37021] transition">About Us</a>
-            <a href="#" class="text-lg hover:text-[#f37021] transition">Products</a>
-            <a href="#" class="text-lg hover:text-[#f37021] transition">Services</a>
-            <a href="#" class="text-lg hover:text-[#f37021] transition">Projects</a>
+        <div class="flex flex-col items-center justify-center h-full py-[10rem] space-y-6">
+            <a href="{{ route('homepage') }}"
+                class="transition hover:text-[#f37021] poppins-regular text-md {{ Route::is('homepage') ? 'font-bold text-[#f37021]' : 'font-light' }}">Home</a>
+            <a href="{{ route('about_us') }}"
+                class="transition hover:text-[#f37021] poppins-regular text-md {{ Route::is('about_us') ? 'font-bold text-[#f37021]' : 'font-light' }}">About
+                Us</a>
+            <a href="{{ route('products.show') }}"
+                class="transition hover:text-[#f37021] poppins-regular text-md {{ Route::is('products.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Products</a>
+            <a href="{{ route('services.show') }}"
+                class="transition hover:text-[#f37021] poppins-regular text-md {{ Route::is('services.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Services</a>
+            <a href="{{ route('projects.show') }}"
+                class="transition hover:text-[#f37021] poppins-regular text-md {{ Route::is('projects.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Projects</a>
 
             <div class="pt-4">
                 <x-button border='border-white' link="homepage" text="Contact Us" textcolor="white" bgcolor="[#f37021]"

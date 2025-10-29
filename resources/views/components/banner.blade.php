@@ -8,19 +8,19 @@
 ])
 
 <div>
-    <div class="relative">
+    <div class="relative mt-[103px] 2xl:mt-0">
         <img src="{{ asset($img) }}" alt="" class="w-full h-auto">
 
         <div class="absolute inset-0 z-20 text-white text-7xl top-32 magistral">
             <div class="flex items-center justify-center w-full h-full">
-                <div>
+                <div data-aos="zoom-in">
                     {{ $page }}
                 </div>
             </div>
         </div>
         <div class="absolute inset-0 z-20 text-base font-semibold text-white/60 bottom-5 poppins-regular">
             <div class="flex items-end justify-center w-full h-full">
-                <div class="flex gap-3">
+                <div class="flex gap-3" data-aos="zoom-in">
                     Home
                     <span>{{ $extension1 }}</span>
                     <span class="{{ !$breadcrumb2 ? 'text-[#f37021]' : '' }}">{{ $breadcrumb1 }}</span>

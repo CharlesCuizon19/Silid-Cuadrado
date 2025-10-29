@@ -27,19 +27,22 @@
     <div class="relative z-10 w-full h-full bg-[#f37021]">
         <div>
             <div class="container py-20 mx-auto">
-                <div class="flex flex-col gap-5">
-                    <div class="font-bold uppercase">
+                <div class="flex flex-col gap-5 mx-3 2xl:mx-0">
+                    <div class="text-xs font-bold uppercase 2xl:text-xl" data-aos="fade-right">
                         our products
                     </div>
-                    <div class="flex items-end justify-between mb-20">
-                        <div class="text-5xl text-white magistral w-[50%] leading-tight">
+                    <div class="flex flex-col gap-4 mb-20 2xl:items-end 2xl:flex-row 2xl:justify-between 2xl:gap-0"
+                        data-aos="fade-right">
+                        <div class="text-2xl 2xl:text-5xl text-white magistral 2xl:w-[50%] leading-tight">
                             Reliable Products Built for Strength and Function
                         </div>
-                        <x-button border='border-black' link="products.show" text="All Products" textcolor="black"
-                            bgcolor="white" bghovercolor="bg-[#c7c7c7]" />
+                        <div class="ml-3 2xl:ml-0" data-aos="fade-left">
+                            <x-button border='border-black' link="products.show" text="All Products" textcolor="black"
+                                bgcolor="white" bghovercolor="bg-[#c7c7c7]" />
+                        </div>
                     </div>
-                    <div class="grid items-end h-full grid-cols-7">
-                        <div class="items-end col-span-1">
+                    <div class="grid items-end h-full grid-cols-1 gap-3 2xl:gap-0 2xl:grid-cols-7">
+                        <div class="items-end col-span-1" data-aos="zoom-in">
                             <div class="flex gap-3">
                                 {{-- navigation --}}
                                 <div
@@ -58,7 +61,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-span-6">
+                        <div class="col-span-6" data-aos="fade-left">
                             <div class="swiper myProductsSwiper max-w-[100%]">
                                 <div class="swiper-wrapper">
                                     @foreach ($products as $item)
@@ -124,10 +127,10 @@
             loop: true,
             breakpoints: {
                 320: {
-                    slidesPerView: 3
+                    slidesPerView: 1
                 },
                 768: {
-                    slidesPerView: 3
+                    slidesPerView: 1
                 },
                 1024: {
                     slidesPerView: 3

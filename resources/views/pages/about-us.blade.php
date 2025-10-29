@@ -7,17 +7,17 @@
         <div class="h-full py-20">
             <div class="mr-[13rem] ">
                 <div class="grid items-center grid-cols-1 gap-20 2xl:grid-cols-5">
-                    <div class="2xl:col-span-3">
+                    <div class="2xl:col-span-3" data-aos="fade-right">
                         <div class="relative">
                             <img src="{{ asset('images/aboutus-img2.png') }}" alt="" class="w-full h-auto">
 
                             <div
-                                class="absolute 2xl:top-[10rem] text-xl 2xl:text-6xl uppercase -rotate-90 -right-[5rem] text-[#E0E0E0]/60 magistral">
+                                class="absolute top-0 2xl:top-[10rem] text-xl 2xl:text-6xl uppercase -rotate-90 -right-[5rem] text-[#E0E0E0]/60 magistral">
                                 experts
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-5 2xl:col-span-2">
+                    <div class="flex flex-col gap-5 2xl:col-span-2" data-aos="fade-left">
                         <div class="font-bold text-black uppercase poppins-regular">
                             who we are
                         </div>
@@ -39,8 +39,8 @@
                         </div>
                         <div class="relative z-10">
                             <div class="flex ml-10 mt-5 gap-3 flex-col magistral text-[#f37021]">
-                                <div class="text-8xl">
-                                    5+
+                                <div class="count-up text-8xl" data-target="5">
+                                    <span class="count-value">0</span><span class="">+</span>
                                 </div>
                                 <div class="text-4xl">
                                     Years of Experience
@@ -63,25 +63,25 @@
                 <div class="absolute inset-0">
                     <div class="container flex items-center justify-center h-full mx-auto">
                         <div class="grid justify-between w-full grid-cols-3 text-center divide-x-[1px] divide-black">
-                            <div class="flex flex-col gap-3 magistral">
-                                <div class="text-white text-7xl">
-                                    300 <span class="text-black">+</span>
+                            <div class="flex flex-col gap-3 magistral" data-aos="zoom-in">
+                                <div class="text-white text-7xl count-up" data-target="300">
+                                    <span class="count-value">0</span><span class="count-suffix">+</span>
                                 </div>
                                 <div class="text-4xl text-white">
                                     Projects Completed
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-3 magistral">
-                                <div class="text-white text-7xl">
-                                    100 <span class="text-black">+</span>
+                            <div class="flex flex-col gap-3 magistral" data-aos="zoom-in">
+                                <div class="text-white text-7xl count-up" data-target="100">
+                                    <span class="count-value">0</span><span class="count-suffix">+</span>
                                 </div>
                                 <div class="text-4xl text-white">
                                     Satisfied Clients
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-3 magistral">
-                                <div class="text-white text-7xl">
-                                    10,000 <span class="text-black">+</span>
+                            <div class="flex flex-col gap-3 magistral" data-aos="zoom-in">
+                                <div class="text-white text-7xl count-up" data-target="10000">
+                                    <span class="count-value">0</span><span class="count-suffix">+</span>
                                 </div>
                                 <div class="text-4xl text-white">
                                     Sqm Built Spaces
@@ -96,7 +96,7 @@
         <div class="h-full py-16">
             <div class="container mx-auto">
                 <div class="grid grid-cols-2 gap-10">
-                    <div class="flex flex-col gap-5">
+                    <div class="flex flex-col gap-5" data-aos="fade-right">
                         <div class="text-lg font-bold uppercase poppins-regular">
                             mission & vision
                         </div>
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="grid grid-cols-1 gap-5">
-                        <div class="flex gap-5 p-5 border rounded-lg">
+                        <div class="flex gap-5 p-5 border rounded-lg" data-aos="zoom-in">
                             <div>
                                 <img src="{{ asset('images/mission.png') }}" alt="" class="h-12 w-52">
                             </div>
@@ -126,7 +126,7 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-5 p-5 border rounded-lg">
+                        <div class="flex gap-5 p-5 border rounded-lg" data-aos="zoom-in">
                             <div>
                                 <img src="{{ asset('images/vision.png') }}" alt="" class="h-12 w-52">
                             </div>
@@ -153,7 +153,7 @@
             <div class="absolute inset-0">
                 <div class="container h-full mx-auto text-center">
                     <div class="flex flex-col items-center justify-center h-full gap-24">
-                        <div class="flex flex-col items-center justify-center gap-5 text-center">
+                        <div class="flex flex-col items-center justify-center gap-5 text-center" data-aos="zoom-in">
                             <div class="text-lg font-bold uppercase poppins-regular">
                                 core values
                             </div>
@@ -166,16 +166,16 @@
                         </div>
 
                         <div class="grid w-full grid-cols-4">
-                            <div class="flex justify-center">
+                            <div class="flex justify-center" data-aos="zoom-in">
                                 <img src="{{ asset('images/corevalue1.png') }}" alt="">
                             </div>
-                            <div class="flex justify-center">
+                            <div class="flex justify-center" data-aos="zoom-in">
                                 <img src="{{ asset('images/corevalue2.png') }}" alt="">
                             </div>
-                            <div class="flex justify-center">
+                            <div class="flex justify-center" data-aos="zoom-in">
                                 <img src="{{ asset('images/corevalue3.png') }}" alt="">
                             </div>
-                            <div class="flex justify-center">
+                            <div class="flex justify-center" data-aos="zoom-in">
                                 <img src="{{ asset('images/corevalue4.png') }}" alt="">
                             </div>
                             <div class="flex justify-center mt-14">
@@ -258,7 +258,7 @@
 
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14">
+                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14" data-aos="zoom-in">
                                 <div class="magistral text-2xl text-[#f37021]">
                                     Innovation
                                 </div>
@@ -266,7 +266,7 @@
                                     Embracing new technologies and methods to improve efficiency and performance.
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14">
+                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14" data-aos="zoom-in">
                                 <div class="magistral text-2xl text-[#f37021]">
                                     Customer-centricity
                                 </div>
@@ -274,7 +274,7 @@
                                     Understanding and meeting client needs and expectations.
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14">
+                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14" data-aos="zoom-in">
                                 <div class="magistral text-2xl text-[#f37021]">
                                     Safety
                                 </div>
@@ -282,7 +282,7 @@
                                     Prioritizing the well-being of employees, clients, and end-users.
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14">
+                            <div class="flex flex-col gap-3 p-5 mx-3 bg-[#f8f8f8] rounded-md mt-14" data-aos="zoom-in">
                                 <div class="magistral text-2xl text-[#f37021]">
                                     Sustainability
                                 </div>
