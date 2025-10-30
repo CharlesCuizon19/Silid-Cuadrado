@@ -6,11 +6,11 @@
         <x-banner page='Our Services' extension1=">" breadcrumb1='Services' img='images/services-banner.png' />
 
         <div class="container h-full pt-20 mx-auto pb-36" data-aos="zoom-in">
-            <div class="grid grid-cols-3 gap-5 mt-10 gap-y-16 gap-x-10">
+            <div class="grid grid-cols-3 gap-5 mx-3 mt-10 gap-y-16 gap-x-10 2xl:mx-0">
                 @foreach ($paginatedServices as $item)
                     <a href="{{ route('services.details', ['id' => $item->id]) }}">
                         <div class="flex flex-col justify-between h-full gap-5 cursor-pointer group">
-                            <img src="{{ asset($item->img) }}" alt="" class="h-auto w-28 spin-y-hover">
+                            <img src="{{ asset($item->img) }}" alt="" class="w-20 h-auto 2xl:w-28 spin-y-hover">
 
                             <div class="flex flex-col items-start justify-start gap-5">
                                 <div

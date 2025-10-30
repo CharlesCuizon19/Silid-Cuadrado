@@ -15,18 +15,18 @@
         class="relative z-40 flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group"
         @click="open = true">
         <div
-            class="relative z-10 overflow-hidden w-fit px-8 py-4 flex items-center justify-center font-medium text-black group bg-[#f37021] transition duration-300">
-            <span class="font-light text-white poppins-regular">
+            class="relative z-10 overflow-hidden w-fit 2xl:px-8 px-4 py-2 2xl:py-4 flex items-center justify-center font-medium text-black group bg-[#f37021] transition duration-300">
+            <span class="text-sm font-light text-white 2xl:text-base poppins-regular">
                 Inquire Now
             </span>
             <span
                 class="absolute -z-10 inset-0 w-0 bg-black/50 skew-x-[-15deg] -left-4 transition-all duration-300 ease-in-out group-hover:w-[calc(100%+30px)] opacity-70"></span>
         </div>
         <div
-            class="absolute w-full h-6 px-[71px] border-black border-t border-l border-r group-hover:border-r-2 group-hover:border-l-2 group-hover:border-t-2 -top-1">
+            class="absolute w-full h-4 2xl:h-6 px-[65px] 2xl:px-[71px] border-black border-t border-l border-r group-hover:border-r-2 group-hover:border-l-2 group-hover:border-t-2 -top-1">
         </div>
         <div
-            class="absolute w-full h-6 px-[71px] border-black border-b border-l border-r -bottom-1 group-hover:border-b-2 group-hover:border-l-2 group-hover:border-r-2">
+            class="absolute w-full h-4 2xl:h-6 px-[65px] 2xl:px-[71px] border-black border-b border-l border-r -bottom-1 group-hover:border-b-2 group-hover:border-l-2 group-hover:border-r-2">
         </div>
         <div
             class="absolute bottom-0 z-20 w-[6px] h-[6px] bg-white right-1 group-hover:flex hidden transition duration-300">
@@ -42,18 +42,21 @@
         x-cloak>
         <div
             class="relative z-10 w-full h-full overflow-y-scroll overflow-x-hidden max-w-3xl max-h-[90%] bg-white shadow-xl">
-            <!-- Close Button -->
-            <button @click="open = false" class="absolute text-gray-400 top-3 right-3 hover:text-gray-700">
-                ✕
-            </button>
+            <div
+                class="sticky top-0 z-20 flex items-center justify-between px-6 py-4 bg-white border-b border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 poppins-regular">Product Inquiry</h2>
+                <button @click="open = false" class="text-2xl leading-none text-gray-400 hover:text-gray-700">
+                    ✕
+                </button>
+            </div>
+
 
             <!-- Content -->
             <div class="p-6">
-                <h2 class="mb-4 text-2xl font-bold text-gray-900 poppins-regular">Product Inquiry</h2>
-
                 <!-- Product Info -->
-                <div class="flex gap-4 p-3 mb-5 rounded-md">
-                    <img src="{{ asset($product->thumbnail) }}" alt="" class="object-cover w-[250px] h-auto">
+                <div class="flex flex-col gap-4 p-3 mb-5 rounded-md 2xl:flex-row">
+                    <img src="{{ asset($product->thumbnail) }}" alt=""
+                        class="object-cover w-full 2xl:w-[250px] h-auto">
                     <div class="flex flex-col justify-center">
                         <span
                             class="text-xs text-[#f37021] font-bold uppercase tracking-wide poppins-regular">{{ $product->category }}</span>

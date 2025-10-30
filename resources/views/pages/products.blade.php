@@ -6,14 +6,14 @@
 
         <div class="pt-20 pb-52">
             <div class="container mx-auto">
-                <div class="flex flex-col gap-3 poppins-regular">
-                    <div class="text-xl font-medium">
+                <div class="flex flex-col gap-3 mx-3 poppins-regular 2xl:mx-0">
+                    <div class="text-xl font-medium ">
                         Showing {{ ($page - 1) * $perPage + 1 }}–
                         {{ min($page * $perPage, $total) }} of {{ $total }} results
                     </div>
 
                     {{-- Filter + Sort + Search --}}
-                    <div class="flex justify-between" data-aos="zoom-in">
+                    <div class="flex flex-col justify-between gap-10 2xl:flex-row 2xl:gap-0" data-aos="zoom-in">
                         <div class="flex gap-2">
                             {{-- Category Dropdown --}}
                             <div x-data="multiSelect()" class="relative">
@@ -94,11 +94,11 @@
                     </div>
 
                     {{-- Product Grid --}}
-                    <div class="grid grid-cols-3 gap-5 mt-10 gap-y-14" data-aos="zoom-in">
+                    <div class="grid grid-cols-1 gap-5 mt-10 2xl:grid-cols-3 gap-y-14" data-aos="zoom-in">
                         @foreach ($products as $item)
                             <a href="{{ route('products.details', ['id' => $item->id]) }}">
                                 <div class="flex flex-col gap-5 cursor-pointer group">
-                                    <div class="relative w-[500px] h-auto">
+                                    <div class="relative w-full 2xl:w-[500px] h-auto">
                                         <div class="overflow-hidden">
                                             <img src="{{ asset($item->img) }}" alt="{{ $item->name }}"
                                                 class="object-cover w-full h-auto transition duration-500 ease-in-out group-hover:scale-105">

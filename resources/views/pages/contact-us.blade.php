@@ -7,18 +7,20 @@
         <div class="h-full">
             <div class="grid grid-cols-1 2xl:grid-cols-2 poppins-regular">
                 <div class="relative bg-[#f2f2f2]">
-                    <img src="{{ asset('images/contactus-bg.png') }}" alt="" class="w-full h-auto mix-blend-multiply">
-                    <div class="absolute inset-0 flex items-center justify-center h-full p-[5rem]" data-aos="fade-right">
+                    <img src="{{ asset('images/contactus-bg.png') }}" alt=""
+                        class="hidden w-full h-auto mix-blend-multiply 2xl:flex">
+                    <div class="2xl:absolute inset-0 flex items-center justify-center h-full p-[2rem] 2xl:p-[5rem]"
+                        data-aos="fade-right">
                         <div class="space-y-16">
                             <div class="flex flex-col gap-5">
-                                <div class="text-lg font-bold uppercase">
+                                <div class="text-sm font-bold uppercase 2xl:text-lg">
                                     Get in touchh
                                 </div>
-                                <div class="magistral text-5xl w-[70%] text-[#f37021]">
+                                <div class="magistral text-2xl 2xl:text-5xl w-[70%] text-[#f37021]">
                                     Reach Out for Any Questions or Inquiries
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-5 text-2xl">
+                            <div class="flex flex-col gap-5 text-base 2xl:text-2xl">
                                 <div class="flex items-center gap-2">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -83,8 +85,8 @@
                 </div>
                 <div class="relative bg-white">
                     <img src="{{ asset('images/contactus-bg2.png') }}" alt=""
-                        class="w-full h-auto mix-blend-multiply">
-                    <div class="absolute inset-0 flex items-center justify-center h-full p-[5rem]">
+                        class="hidden w-full h-auto mix-blend-multiply 2xl:flex">
+                    <div class="2xl:absolute inset-0 flex items-center justify-center h-full p-[2rem] 2xl:p-[5rem]">
                         <form class="w-full space-y-14 poppins-regular" x-data="{ agreed: false }" data-aos="fade-left">
                             <div>
                                 <label class="block mb-1 text-lg font-bold text-black">
@@ -118,8 +120,7 @@
                                     Message <span class="text-[#f37021]">*</span>
                                 </label>
                                 <textarea class="w-full bg-transparent border-b border-gray-300 focus:border-[#f37021] outline-none py-2 resize-none"
-                                    rows="4" placeholder="Enter your message">
-                                </textarea>
+                                    rows="4" placeholder="Enter your message"></textarea>
                             </div>
 
                             <!-- Confirmation Checkbox -->

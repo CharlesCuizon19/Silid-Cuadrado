@@ -23,7 +23,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     @include('partials.header')
     @yield('content')
     @include('partials.footer')
@@ -32,7 +32,7 @@
 <script src="//unpkg.com/alpinejs" defer></script>
 <script>
     AOS.init({
-        duration: 600, // delay in milliseconds (e.g., 300ms = 0.3s)
+        // duration: 600, // delay in milliseconds (e.g., 300ms = 0.3s)
     });
 </script>
 

@@ -73,8 +73,8 @@
                 class="transition hover:text-[#f37021] poppins-regular text-md {{ Route::is('projects.*') ? 'font-bold text-[#f37021]' : 'font-light' }}">Projects</a>
 
             <div class="pt-4">
-                <x-button border='border-white' link="homepage" text="Contact Us" textcolor="white" bgcolor="[#f37021]"
-                    bghovercolor="bg-[#a63e00]" />
+                <x-button border='border-white' link="contact-us" text="Contact Us" textcolor="white"
+                    bgcolor="[#f37021]" bghovercolor="bg-[#a63e00]" />
             </div>
         </div>
     </nav>

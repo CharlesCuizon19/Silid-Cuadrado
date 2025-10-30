@@ -6,7 +6,7 @@
 
         <div class="pt-20 pb-52">
             <div class="container mx-auto">
-                <div class="flex flex-col gap-3 poppins-regular">
+                <div class="flex flex-col gap-3 mx-3 poppins-regular 2xl:mx-0">
                     {{-- Info text --}}
                     <div class="text-xl font-medium" data-aos="zoom-in">
                         Showing {{ ($page - 1) * $perPage + 1 }}–
@@ -14,7 +14,8 @@
                     </div>
 
                     {{-- Filter + Search (unchanged) --}}
-                    <div class="flex items-center justify-between" data-aos="zoom-in">
+                    <div class="flex flex-col items-start justify-between gap-10 2xl:items-center 2xl:flex-row 2xl:gap-0"
+                        data-aos="zoom-in">
                         <div class="flex gap-2">
                             <div x-data="multiSelect()" class="relative">
                                 <button @click="toggleDropdown"
@@ -38,7 +39,7 @@
                                     </svg>
                                 </button>
                                 <div x-show="open" @click.outside="open = false" x-transition
-                                    class="absolute left-0 z-10 w-full mt-2 bg-white border border-gray-200 rounded-md shadow-lg text-start">
+                                    class="absolute left-0 z-30 w-full mt-2 bg-white border border-gray-200 rounded-md shadow-lg text-start">
                                     <ul class="py-1 text-gray-700 text-md">
                                         <template x-for="option in options" :key="option">
                                             <li>
@@ -71,10 +72,10 @@
 
 
                     {{-- Projects Grid --}}
-                    <div class="grid grid-cols-2 gap-5 mt-10" data-aos="zoom-in">
+                    <div class="grid grid-cols-1 gap-5 2xl:mt-10 2xl:grid-cols-2" data-aos="zoom-in">
                         @foreach ($projects as $item)
                             <a href="{{ route('projects.details', ['id' => $item->id]) }}"
-                                class="w-full h-[410px] group overflow-hidden cursor-pointer block">
+                                class="w-full h-auto 2xl:h-[410px] group overflow-hidden cursor-pointer block">
                                 <div class="relative">
                                     <img src="{{ asset($item->img) }}" alt="{{ $item->name }} project"
                                         class="object-cover w-full h-auto transition duration-300 group-hover:scale-105">

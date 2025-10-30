@@ -7,7 +7,7 @@
             breadcrumb2="{!! $service->title !!}" img='images/services-banner.png' />
 
         <div class="container h-full py-20 mx-auto">
-            <div class="grid grid-cols-3 gap-16 poppins-regular">
+            <div class="grid grid-cols-1 gap-16 mx-3 2xl:grid-cols-3 poppins-regular 2xl:mx-0">
                 <div class="flex flex-col col-span-2 gap-6">
                     <img src="{{ asset($service->thumbnail) }}" alt="">
 
@@ -179,7 +179,11 @@
             },
             breakpoints: {
                 640: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
+                    spaceBetween: 15
+                },
+                768: {
+                    slidesPerView: 1,
                     spaceBetween: 15
                 },
                 1024: {

@@ -52,37 +52,37 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-5">
-                    <div class="text-5xl magistral-medium">
+                <div class="flex flex-col gap-5 mx-3 2xl:mx-0">
+                    <div class="text-3xl 2xl:text-5xl magistral-medium">
                         {{ $product->name }}
                     </div>
-                    <div class="text-xl poppins-regular">
+                    <div class="text-sm 2xl:text-xl poppins-regular">
                         {{ $product->description }}
                     </div>
                     <div class="flex flex-col gap-2 mb-5">
                         <div class="text-sm text-gray-400 uppercase magistral-medium">
                             category
                         </div>
-                        <div class="text-[#f37021] font-bold text-lg poppins-regular uppercase">
+                        <div class="text-[#f37021] font-bold text-sm 2xl:text-lg poppins-regular uppercase">
                             {{ $product->category }}
                         </div>
                     </div>
                     <x-product-inquiry-modal :product="$product" />
                 </div>
             </div>
-            <div>
+            <div class="mx-3 2xl:mx-0">
                 <div x-data="{ tab: 'overview' }" class="w-full poppins-regular">
                     <!-- Tab Buttons -->
                     <div class="flex gap-6 border-b border-gray-200">
                         <button @click="tab = 'overview'"
                             :class="tab === 'overview' ? 'text-[#f37021] border-b-2 border-[#f37021]' : 'text-gray-400'"
-                            class="pb-2 transition-colors duration-200">
+                            class="pb-2 text-sm transition-colors duration-200 2xl:text-base">
                             Product Overview
                         </button>
 
                         <button @click="tab = 'info'"
                             :class="tab === 'info' ? 'text-[#f37021] border-b-2 border-[#f37021]' : 'text-gray-400'"
-                            class="pb-2 transition-colors duration-200">
+                            class="pb-2 text-sm transition-colors duration-200 2xl:text-base">
                             Additional Information
                         </button>
                     </div>
@@ -90,7 +90,7 @@
                     <!-- Tab Contents -->
                     <div class="mt-4 leading-relaxed">
                         <div x-show="tab === 'overview'" x-transition>
-                            <p class="text-lg">
+                            <p class="text-sm 2xl:text-lg">
                                 {{ $product->overview }}
                             </p>
                         </div>
@@ -101,11 +101,11 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col poppins-regular">
-                <div class="mb-3 text-lg font-bold">
+            <div class="flex flex-col mx-3 poppins-regular 2xl:mx-0">
+                <div class="mb-3 text-sm font-bold 2xl:text-lg">
                     Get in Touch:
                 </div>
-                <ul class="space-y-3 text-lg list-disc">
+                <ul class="space-y-3 text-sm list-disc 2xl:text-lg">
                     <li>
                         Telephone: (046) 435-2493
                     </li>
@@ -119,7 +119,7 @@
                         Email: silidcuadrad0@gmail.com
                     </li>
                 </ul>
-                <div class="pb-5 mt-6 mb-5 text-2xl font-bold border-b">
+                <div class="pb-5 mt-6 mb-5 text-lg font-bold border-b 2xl:text-2xl">
                     INQUIRE NOW!!
                 </div>
                 <x-related-products :products="$products" />
