@@ -87,7 +87,7 @@
                     <img src="{{ asset('images/contactus-bg2.png') }}" alt=""
                         class="hidden w-full h-auto mix-blend-multiply 2xl:flex">
                     <div class="2xl:absolute inset-0 flex items-center justify-center h-full p-[2rem] 2xl:p-[5rem]">
-                        <form class="w-full space-y-14 poppins-regular" x-data="{ agreed: false }" data-aos="fade-left">
+                        <form class="w-full space-y-14 poppins-regular" x-data="{ agreed: false }" data-aos="zoom-in">
                             <div>
                                 <label class="block mb-1 text-lg font-bold text-black">
                                     Full Name <span class="text-[#f37021]">*</span>

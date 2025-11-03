@@ -36,7 +36,7 @@
                         <div class="text-2xl 2xl:text-5xl text-white magistral 2xl:w-[50%] leading-tight">
                             Reliable Products Built for Strength and Function
                         </div>
-                        <div class="ml-3 2xl:ml-0" data-aos="fade-left">
+                        <div class="ml-3 2xl:ml-0" data-aos="zoom-in">
                             <x-button border='border-black' link="products.show" text="All Products" textcolor="black"
                                 bgcolor="white" bghovercolor="bg-[#c7c7c7]" />
                         </div>
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-span-6" data-aos="fade-left">
+                        <div class="col-span-6" data-aos="zoom-in">
                             <div class="swiper myProductsSwiper max-w-[100%]">
                                 <div class="swiper-wrapper">
                                     @foreach ($products as $item)
