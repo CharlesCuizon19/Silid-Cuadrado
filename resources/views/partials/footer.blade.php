@@ -218,23 +218,35 @@
                         <div class="z-10 h-full col-span-6 mt-5 2xl:relative 2xl:col-span-2 2xl:mt-0"
                             data-aos="fade-left">
                             <div class="2xl:absolute z-20 -top-[10rem]">
-                                <div class="flex flex-col gap-5 px-7 py-12 bg-[#f37021] h-full">
+                                <div x-data="newsletterForm()" class="relative flex flex-col gap-5 px-7 py-12 bg-[#f37021] h-full">
                                     <div class="text-sm font-bold text-black uppercase 2xl:text-lg poppins-regular">
                                         stay updated
                                     </div>
+
                                     <div class="text-2xl leading-relaxed text-white 2xl:text-4xl magistral">
                                         Subscribe to Receive Updates and Insights on our Latest Projects
                                     </div>
+
                                     <div class="text-sm font-light text-white 2xl:text-lg">
                                         Email Address
                                     </div>
-                                    <input type="text"
-                                        class="px-3 py-1 bg-transparent border-b border-black placeholder:text-white/50 placeholder:font-light focus:outline-none focus:ring-0"
-                                        placeholder="eg. johndoe@gmail.com">
-                                    <div class="pt-8 ">
-                                        <x-button border='border-black' link="homepage" text="Subscribe Now"
-                                            textcolor="white" />
-                                    </div>
+
+                                    <form @submit.prevent="submitForm" class="flex flex-col gap-4">
+                                        <input type="email" x-model="email"
+                                            class="px-3 py-1 bg-transparent border-b border-black placeholder:text-white/50 placeholder:font-light focus:outline-none focus:ring-0"
+                                            placeholder="eg. johndoe@gmail.com" required>
+
+                                        <div class="pt-8">
+                                            <div @click="submitForm">
+                                                <x-button border="border-black" text="Subscribe Now" textcolor="white" bgcolor="black" />
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <template x-if="message">
+                                        <div class="mt-3 text-sm text-white" x-text="message"></div>
+                                    </template>
+
                                     <img src="{{ asset('images/footer-absolute.png') }}" alt=""
                                         class="absolute bottom-0 right-0 z-30 hidden mix-blend-multiply opacity-20 2xl:flex">
                                 </div>
@@ -252,3 +264,58 @@
         </div>
     </div>
 </div>
+
+
+<!-- ✅ SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('newsletterForm', () => ({
+            email: '',
+            message: '',
+
+            async submitForm() {
+                if (!this.email) {
+                    this.message = 'Please enter a valid email.';
+                    return;
+                }
+
+                try {
+                    const response = await fetch("{{ route('newsletter.store') }}", {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            email: this.email
+                        })
+                    });
+
+                    if (!response.ok) throw new Error(await response.text());
+
+                    this.message = '✅ Subscribed successfully!';
+                    this.email = '';
+
+                    Swal.fire({
+                        title: 'Subscribed!',
+                        text: 'Your email has been successfully added to our newsletter!',
+                        icon: 'success',
+                        confirmButtonColor: '#253e16',
+                        confirmButtonText: 'OK'
+                    });
+                } catch (error) {
+                    this.message = '❌ Something went wrong. Try again later.';
+                    Swal.fire({
+                        title: 'Oops!',
+                        text: 'Please enter a valid email address or try again later.',
+                        icon: 'error',
+                        confirmButtonColor: '#253e16',
+                        confirmButtonText: 'Try Again'
+                    });
+                }
+            }
+        }))
+    })
+</script>

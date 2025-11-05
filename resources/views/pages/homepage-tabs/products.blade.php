@@ -1,28 +1,3 @@
-@php
-    $products = [
-        (object) [
-            'id' => 1,
-            'name' => 'Panel Boards',
-            'img' => 'images/product1.png',
-        ],
-        (object) [
-            'id' => 2,
-            'name' => 'Cable Trays',
-            'img' => 'images/product2.png',
-        ],
-        (object) [
-            'id' => 3,
-            'name' => 'Pull Boxes',
-            'img' => 'images/product3.png',
-        ],
-        (object) [
-            'id' => 4,
-            'name' => 'Panel Boards',
-            'img' => 'images/product3.png',
-        ],
-    ];
-@endphp
-
 <div>
     <div class="relative z-10 w-full h-full bg-[#f37021]">
         <div>
@@ -31,6 +6,7 @@
                     <div class="text-xs font-bold uppercase 2xl:text-xl" data-aos="fade-right">
                         our products
                     </div>
+
                     <div class="flex flex-col gap-4 mb-20 2xl:items-end 2xl:flex-row 2xl:justify-between 2xl:gap-0"
                         data-aos="fade-right">
                         <div class="text-2xl 2xl:text-5xl text-white magistral 2xl:w-[50%] leading-tight">
@@ -41,6 +17,7 @@
                                 bgcolor="white" bghovercolor="bg-[#c7c7c7]" />
                         </div>
                     </div>
+
                     <div class="grid items-end h-full grid-cols-1 gap-3 2xl:gap-0 2xl:grid-cols-7">
                         <div class="items-end col-span-1" data-aos="zoom-in">
                             <div class="flex gap-3">
@@ -61,45 +38,46 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-span-6" data-aos="fade-left">
                             <div class="swiper myProductsSwiper max-w-[100%]">
                                 <div class="swiper-wrapper">
                                     @foreach ($products as $item)
-                                        <a href="{{ route('products.details', ['id' => $item->id]) }}"
-                                            class="swiper-slide">
-                                            <div class="flex flex-col gap-5 cursor-pointer group">
-                                                <div class="relative h-auto w-[414px]">
-                                                    <div class="overflow-hidden">
-                                                        <img src="{{ asset($item->img) }}" alt=""
-                                                            class="object-cover w-full h-auto transition duration-500 ease-in-out group-hover:scale-105">
-                                                    </div>
-                                                    <div
-                                                        class="absolute inset-0 transition duration-500 ease-in-out opacity-0 bg-black/50 group-hover:opacity-100">
-                                                        <div class="flex justify-center h-full">
-                                                            <div
-                                                                class="flex items-center justify-center gap-3 poppins-regular">
-                                                                <div class="text-white transition">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        class="w-5 h-5" fill="none"
-                                                                        viewBox="0 0 24 24" stroke="currentColor">
-                                                                        <path stroke-linecap="round"
-                                                                            stroke-linejoin="round" stroke-width="3"
-                                                                            d="M21 21l-4.35-4.35m1.1-5.4a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="text-white">
-                                                                    View Product
-                                                                </div>
+                                    <a href="{{ route('products.details', ['id' => $item->id]) }}" class="swiper-slide">
+                                        <div class="flex flex-col gap-5 cursor-pointer group">
+                                            <div class="relative h-auto w-[414px]">
+                                                <div class="overflow-hidden">
+                                                    <img src="{{ asset($item->thumbnail ?? 'images/no-image.png') }}"
+                                                        alt="{{ $item->title }}"
+                                                        class="object-cover w-full h-auto transition duration-500 ease-in-out group-hover:scale-105">
+                                                </div>
+                                                <div
+                                                    class="absolute inset-0 transition duration-500 ease-in-out opacity-0 bg-black/50 group-hover:opacity-100">
+                                                    <div class="flex justify-center h-full">
+                                                        <div
+                                                            class="flex items-center justify-center gap-3 poppins-regular">
+                                                            <div class="text-white transition">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="w-5 h-5" fill="none"
+                                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                                    <path stroke-linecap="round"
+                                                                        stroke-linejoin="round" stroke-width="3"
+                                                                        d="M21 21l-4.35-4.35m1.1-5.4a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
+                                                                </svg>
+                                                            </div>
+                                                            <div class="text-white">
+                                                                View Product
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div
-                                                    class="text-2xl transition duration-500 ease-in-out magistral-medium group-hover:text-white">
-                                                    {{ $item->name }}
-                                                </div>
                                             </div>
-                                        </a>
+                                            <div
+                                                class="text-2xl transition duration-500 ease-in-out magistral-medium group-hover:text-white">
+                                                {{ $item->title }}
+                                            </div>
+                                        </div>
+                                    </a>
                                     @endforeach
                                 </div>
                             </div>
@@ -114,6 +92,7 @@
         </div>
     </div>
 </div>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {

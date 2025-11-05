@@ -1,5 +1,5 @@
 @props([
-    'product' => [],
+'product' => [],
 ])
 
 <div x-data="{
@@ -56,9 +56,9 @@
                     <img src="{{ asset($product->thumbnail) }}" alt="" class="object-cover w-[250px] h-auto">
                     <div class="flex flex-col justify-center">
                         <span
-                            class="text-xs text-[#f37021] font-bold uppercase tracking-wide poppins-regular">{{ $product->category }}</span>
-                        <h3 class="text-2xl font-bold magistral-medium">{{ $product->name }}</h3>
-                        <p class="text-base leading-snug poppins-regular">{{ $product->description }}</p>
+                            class="text-xs text-[#f37021] font-bold uppercase tracking-wide poppins-regular"> {{ $product->category->category_name ?? 'Uncategorized' }}</span>
+                        <h3 class="text-2xl font-bold magistral-medium">{{ $product->title }}</h3>
+                        <p class="text-base leading-snug poppins-regular">{!! $product->description !!}</p>
                     </div>
                 </div>
 
