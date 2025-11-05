@@ -1,4 +1,4 @@
-<div class="relative swiper banner-swiper mt-[103px] 2xl:mt-0">
+<div class="relative swiper banner-swiper mt-[103px] 2xl:mt-0 2xl:h-[65rem] 2xl:w-full h-[20rem]">
     <div class="swiper-wrapper">
         @foreach ($banners as $item)
             @php
@@ -14,7 +14,7 @@
 
                 <div class="absolute inset-0 z-10">
                     <img src="{{ asset('images/banner-sheet.png') }}" alt="Banner Overlay"
-                        class="object-cover w-full max-h-full">
+                        class="object-cover w-full h-full">
                 </div>
 
                 <div class="absolute inset-0 z-20 w-full h-full mx-3 text-white 2xl:mx-0">

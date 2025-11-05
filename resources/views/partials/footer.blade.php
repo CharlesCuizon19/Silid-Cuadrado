@@ -31,7 +31,7 @@
             <div class="absolute inset-0 z-10 w-full h-full bg-black/25"></div>
         </div>
 
-        <div class="bg-[#121212] pt-10 overflow-hidden">
+        <div class="bg-[#121212] pt-10">
             <div class="flex flex-col mx-3 2xl:mx-0">
                 <div class="container mx-auto">
                     <div class="grid pb-10 text-white border-b 2xl:grid-cols-6 border-white/20 poppins-regular">
@@ -216,7 +216,8 @@
                         </div>
                         <div class="z-10 h-full col-span-6 mt-5 2xl:relative 2xl:col-span-2 2xl:mt-0">
                             <div class="2xl:absolute z-20 -top-[10rem]">
-                                <div x-data="newsletterForm()" class="relative flex flex-col gap-5 px-7 py-12 bg-[#f37021] h-full">
+                                <div x-data="newsletterForm()"
+                                    class="relative flex flex-col gap-5 px-7 py-12 bg-[#f37021] h-full">
                                     <div class="text-sm font-bold text-black uppercase 2xl:text-lg poppins-regular">
                                         stay updated
                                     </div>
@@ -236,7 +237,8 @@
 
                                         <div class="pt-8">
                                             <div @click="submitForm">
-                                                <x-button border="border-black" text="Subscribe Now" textcolor="white" bgcolor="black" />
+                                                <x-button border="border-black" text="Subscribe Now"
+                                                    textcolor="white" bgcolor="black" />
                                             </div>
                                         </div>
                                     </form>
