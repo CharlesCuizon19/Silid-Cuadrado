@@ -7,7 +7,7 @@
         You Might Also Like
     </div>
 
-    <div class="grid w-full grid-cols-3">
+    <div class="grid w-full grid-cols-1 gap-5 2xl:grid-cols-3">
         @foreach ($products as $item)
             <a href="{{ route('products.details', ['id' => $item->id]) }}" class="swiper-slide">
                 <div class="flex flex-col gap-5 cursor-pointer group">

@@ -1,6 +1,6 @@
 <div>
     <div class="flex flex-col">
-        <div class="relative z-10 border border-black bg-[#191718]">
+        <div class="relative z-10 bg-[#191718]">
             <div class="h-[20rem] 2xl:h-auto">
                 <img src="{{ asset('images/footer-rectangle.png') }}" alt=""
                     class="object-cover object-left w-full h-full">
