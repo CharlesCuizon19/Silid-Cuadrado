@@ -1,7 +1,7 @@
 <div class="relative mx-3 overflow-hidden 2xl:mx-0">
     <div class="container py-10 mx-auto 2xl:py-28">
         <div class="grid items-center grid-cols-1 gap-10 2xl:grid-cols-2">
-            <div data-aos="fade-right">
+            <div data-aos="zoom-in">
                 <img src="{{ asset('images/aboutus-img.png') }}" alt="" class="w-full h-auto">
             </div>
             <div class="flex flex-col gap-5 px-2 2xl:px-0" data-aos="zoom-in">

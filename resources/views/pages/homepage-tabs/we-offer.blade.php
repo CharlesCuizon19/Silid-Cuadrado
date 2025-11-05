@@ -4,7 +4,7 @@
             <!-- LEFT SECTION -->
             <div class="flex flex-col col-span-4 gap-10 2xl:col-span-3">
                 <!-- Header -->
-                <div class="flex items-center justify-between" data-aos="fade-right">
+                <div class="flex items-center justify-between" data-aos="zoom-in">
                     <h2 class="text-3xl text-black 2xl:text-5xl magistral">We Offer</h2>
                     <div class="flex gap-3">
                         <!-- Prev -->

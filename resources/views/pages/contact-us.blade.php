@@ -10,7 +10,7 @@
                     <img src="{{ asset('images/contactus-bg.png') }}" alt=""
                         class="hidden w-full h-auto mix-blend-multiply 2xl:flex">
                     <div class="2xl:absolute inset-0 flex items-center justify-center h-full p-[2rem] 2xl:p-[5rem]"
-                        data-aos="fade-right">
+                        data-aos="zoom-in">
                         <div class="space-y-16">
                             <div class="flex flex-col gap-5">
                                 <div class="text-sm font-bold uppercase 2xl:text-lg">

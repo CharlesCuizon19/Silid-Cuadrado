@@ -1,6 +1,6 @@
 <div class="mx-3 2xl:mx-0">
     <div class="container grid grid-cols-1 gap-12 py-24 mx-auto 2xl:grid-cols-2">
-        <div class="grid grid-cols-2 gap-4 2xl:gap-7" data-aos="fade-right">
+        <div class="grid grid-cols-2 gap-4 2xl:gap-7" data-aos="zoom-in">
             <div class="col-span-2">
                 <img src="{{ asset('images/expertise-img1.png') }}" alt="" class="w-full h-auto">
             </div>

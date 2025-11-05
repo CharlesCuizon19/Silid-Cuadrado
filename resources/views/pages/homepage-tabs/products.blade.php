@@ -3,12 +3,12 @@
         <div>
             <div class="container py-20 mx-auto">
                 <div class="flex flex-col gap-5 mx-3 2xl:mx-0">
-                    <div class="text-xs font-bold uppercase 2xl:text-xl" data-aos="fade-right">
+                    <div class="text-xs font-bold uppercase 2xl:text-xl" data-aos="zoom-in">
                         our products
                     </div>
 
                     <div class="flex flex-col gap-4 mb-20 2xl:items-end 2xl:flex-row 2xl:justify-between 2xl:gap-0"
-                        data-aos="fade-right">
+                        data-aos="zoom-in">
                         <div class="text-2xl 2xl:text-5xl text-white magistral 2xl:w-[50%] leading-tight">
                             Reliable Products Built for Strength and Function
                         </div>

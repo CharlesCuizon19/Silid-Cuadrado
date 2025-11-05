@@ -19,29 +19,28 @@
 
                 <div class="absolute inset-0 z-20 w-full h-full mx-3 text-white 2xl:mx-0">
                     <div class="container flex flex-col justify-center w-full h-full gap-3 mx-auto 2xl:gap-5">
-                        <div class="text-xs 2xl:text-base font-bold poppins-regular text-[#f37021]"
-                            data-aos="fade-right">
+                        <div class="text-xs 2xl:text-base font-bold poppins-regular text-[#f37021]" data-aos="zoom-in">
                             CUSTOM-ENGINEERED RESULTS
                         </div>
 
                         <div class="text-2xl 2xl:text-8xl magistral leading-[1.1] font-bold">
                             <div class="flex items-end gap-3 2xl:gap-5">
-                                <div data-aos="fade-right">{{ $firstWord }}</div>
+                                <div data-aos="zoom-in">{{ $firstWord }}</div>
                                 <div class="flex items-end" data-aos="zoom-in">
                                     <div
                                         class="flex bg-gradient-to-r from-[#f37021] to-transparent w-24 2xl:w-64 h-[16px] 2xl:h-[60px] mb-1 2xl:mb-2">
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-[80%] 2xl:w-[50%]" data-aos="fade-right">{{ $remaining }}</div>
+                            <div class="w-[80%] 2xl:w-[50%]" data-aos="zoom-in">{{ $remaining }}</div>
                         </div>
 
                         <div class="text-sm 2xl:text-2xl font-light poppins-regular 2xl:w-[50%] 2xl:leading-[50px]"
-                            data-aos="fade-right">
+                            data-aos="zoom-in">
                             {!! $item->subtitle !!}
                         </div>
 
-                        <div data-aos="fade-right">
+                        <div data-aos="zoom-in">
                             <x-button border='border-white' link="homepage" text="Explore Services" textcolor="white"
                                 bgcolor="[#f37021]" bghovercolor="bg-[#a63e00]" />
                         </div>

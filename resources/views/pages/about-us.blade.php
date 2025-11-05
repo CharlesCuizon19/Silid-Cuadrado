@@ -7,7 +7,7 @@
         <div class="h-full py-20">
             <div class="mx-3 2xl:mr-[13rem] ">
                 <div class="grid items-center grid-cols-1 gap-20 2xl:grid-cols-5">
-                    <div class="2xl:col-span-3" data-aos="fade-right">
+                    <div class="2xl:col-span-3" data-aos="zoom-in">
                         <div class="relative">
                             <img src="{{ asset('images/aboutus-img2.png') }}" alt="" class="w-full h-auto">
 
@@ -101,7 +101,7 @@
         <div class="h-full py-16">
             <div class="container h-full mx-auto">
                 <div class="grid grid-cols-1 gap-10 mx-3 2xl:mx-0 2xl:grid-cols-2">
-                    <div class="flex flex-col gap-5" data-aos="fade-right">
+                    <div class="flex flex-col gap-5" data-aos="zoom-in">
                         <div class="text-sm font-bold uppercase 2xl:text-lg poppins-regular">
                             mission & vision
                         </div>
