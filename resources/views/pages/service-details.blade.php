@@ -137,7 +137,7 @@
                                         Reach Out for the Service That Fits You
                                     </div>
                                     <div class="pt-8">
-                                        <x-button border='border-black' link="homepage" text="Contact Us"
+                                        <x-button border='border-black' link="contact-us" text="Contact Us"
                                             textcolor="white" />
                                     </div>
                                     <img src="{{ asset('images/footer-absolute.png') }}" alt=""
