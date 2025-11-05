@@ -14,7 +14,7 @@
                 <img src="{{ asset('images/expertise-img4.png') }}" alt="" class="w-full h-auto">
             </div>
         </div>
-        <div class="flex flex-col gap-3 2xl:justify-between 2xl:gap-0" data-aos="fade-left">
+        <div class="flex flex-col gap-3 2xl:justify-between 2xl:gap-0" data-aos="zoom-in">
             <div class="text-xs font-bold uppercase 2xl:text-lg poppins-regular">
                 our expertise
             </div>

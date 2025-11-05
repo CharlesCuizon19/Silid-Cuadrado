@@ -10,7 +10,7 @@
                         Showcasing Strength and Design in Every Build
                     </div>
                 </div>
-                <div class="flex flex-col gap-5 2xl:justify-between 2xl:gap-0" data-aos="fade-left">
+                <div class="flex flex-col gap-5 2xl:justify-between 2xl:gap-0" data-aos="zoom-in">
                     <div class="text-sm 2xl:text-xl poppins-regular">
                         From large-scale steel fabrication works to customized interior fit-outs, each project reflects
                         our commitment to durability, functionality, and style.

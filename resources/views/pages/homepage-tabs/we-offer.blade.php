@@ -1,5 +1,5 @@
 <div class="py-16">
-    <div class="container mx-auto h-full">
+    <div class="container h-full mx-auto">
         <div class="relative grid grid-cols-4 gap-10 mx-3 2xl:mx-0">
             <!-- LEFT SECTION -->
             <div class="flex flex-col col-span-4 gap-10 2xl:col-span-3">
@@ -27,52 +27,52 @@
                 </div>
 
                 <!-- Swiper -->
-                <div class="swiper myServicesSwiper w-full" data-aos="fade-up">
+                <div class="w-full swiper myServicesSwiper" data-aos="fade-up">
                     <div class="swiper-wrapper">
                         @foreach ($services as $item)
-                        <a href="{{ route('services.details', ['id' => $item->id]) }}" class="swiper-slide block">
-                            <div
-                                class="flex flex-col justify-between h-full gap-5 p-6 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition duration-300 group">
+                            <a href="{{ route('services.details', ['id' => $item->id]) }}" class="block swiper-slide">
+                                <div
+                                    class="flex flex-col justify-between h-full gap-5 p-6 transition duration-300 bg-white border border-gray-200 shadow-sm rounded-2xl hover:shadow-md group">
 
-                                <!-- ICON or IMAGE -->
-                                @if(!empty($item->icon))
-                                <img src="{{ asset($item->icon) }}" alt="{{ $item->title }}"
-                                    class="w-16 h-16 2xl:w-20 2xl:h-20 object-contain mx-auto spin-y-hover">
-                                @else
-                                <img src="{{ asset($item->img) }}" alt="{{ $item->title }}"
-                                    class="w-20 h-auto 2xl:w-28 spin-y-hover mx-auto">
-                                @endif
-
-                                <!-- Content -->
-                                <div class="flex flex-col items-start justify-start gap-3 text-center 2xl:text-left">
-                                    <div
-                                        class="text-2xl font-bold magistral-medium group-hover:text-[#f37021] transition duration-300">
-                                        {{ $item->title }}
-                                    </div>
-
-                                    @if(!empty($item->short_description))
-                                    <div class="text-base text-black/80 poppins-regular">
-                                        {{ $item->short_description }}
-                                    </div>
+                                    <!-- ICON or IMAGE -->
+                                    @if (!empty($item->icon))
+                                        <img src="{{ asset($item->icon) }}" alt="{{ $item->title }}"
+                                            class="object-contain w-16 h-16 mx-auto 2xl:w-20 2xl:h-20 spin-y-hover">
+                                    @else
+                                        <img src="{{ asset($item->img) }}" alt="{{ $item->title }}"
+                                            class="w-20 h-auto mx-auto 2xl:w-28 spin-y-hover">
                                     @endif
 
-                                    <div class="poppins-regular text-black/70 leading-relaxed line-clamp-2">
-                                        {{ $item->description }}
-                                    </div>
-
+                                    <!-- Content -->
                                     <div
-                                        class="flex items-center gap-2 font-semibold poppins-regular text-[#f37021] transition duration-300 group-hover:gap-3">
-                                        <span>View Details</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                            class="size-6 transition-transform duration-300 group-hover:translate-x-1">
-                                            <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                                stroke-linejoin="round" stroke-width="2"
-                                                d="m10 17l5-5l-5-5" />
-                                        </svg>
+                                        class="flex flex-col items-start justify-start gap-3 text-center 2xl:text-left">
+                                        <div
+                                            class="text-2xl font-bold magistral-medium group-hover:text-[#f37021] transition duration-300">
+                                            {{ $item->title }}
+                                        </div>
+
+                                        @if (!empty($item->short_description))
+                                            <div class="text-base text-black/80 poppins-regular">
+                                                {{ $item->short_description }}
+                                            </div>
+                                        @endif
+
+                                        <div class="leading-relaxed poppins-regular text-black/70 line-clamp-2">
+                                            {{ $item->description }}
+                                        </div>
+
+                                        <div
+                                            class="flex items-center gap-2 font-semibold poppins-regular text-[#f37021] transition duration-300 group-hover:gap-3">
+                                            <span>View Details</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                class="transition-transform duration-300 size-6 group-hover:translate-x-1">
+                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="2" d="m10 17l5-5l-5-5" />
+                                            </svg>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
                         @endforeach
                     </div>
                 </div>
@@ -87,7 +87,7 @@
 
                     <div class="absolute top-0 px-10 py-5 text-white">
                         <div class="flex flex-col gap-4">
-                            <div class="magistral text-8xl text-shadow-soft leading-none">5+</div>
+                            <div class="leading-none magistral text-8xl text-shadow-soft">5+</div>
                             <div class="text-2xl magistral text-shadow-soft">Years of Experience</div>
 
                             <a href="{{ route('services.show') }}"
@@ -95,7 +95,7 @@
                                 <div
                                     class="rounded-full bg-white group-hover:bg-[#5f544d] group-hover:text-white p-2 text-[#f37021] transition duration-300 cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        class="size-5 transition-transform group-hover:translate-x-1">
+                                        class="transition-transform size-5 group-hover:translate-x-1">
                                         <path fill="none" stroke="currentColor" stroke-linecap="round"
                                             stroke-linejoin="round" stroke-width="2" d="m10 17l5-5l-5-5" />
                                     </svg>

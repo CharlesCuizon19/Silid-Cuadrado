@@ -4,7 +4,7 @@
             <div data-aos="fade-right">
                 <img src="{{ asset('images/aboutus-img.png') }}" alt="" class="w-full h-auto">
             </div>
-            <div class="flex flex-col gap-5 px-2 2xl:px-0" data-aos="fade-left">
+            <div class="flex flex-col gap-5 px-2 2xl:px-0" data-aos="zoom-in">
                 <div class="text-xs font-bold uppercase 2xl:text-xl poppins-regular">
                     about us
                 </div>

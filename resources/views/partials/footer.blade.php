@@ -8,7 +8,7 @@
 
             <div class="absolute bottom-0 z-20 w-full h-full mx-3 2xl:inset-0 2xl:mx-0">
                 <div class="container h-full mx-auto">
-                    <div class="flex justify-end h-full" data-aos="fade-left">
+                    <div class="flex justify-end h-full">
                         <div class="flex flex-col gap-2 2xl:gap-5 2xl:w-[50%] mt-20">
                             <div class="uppercase text-[#f37021] text-sm 2xl:text-lg poppins-regular font-bold">
                                 Contact us
@@ -31,12 +31,11 @@
             <div class="absolute inset-0 z-10 w-full h-full bg-black/25"></div>
         </div>
 
-        <div class="bg-[#121212] pt-10">
+        <div class="bg-[#121212] pt-10 overflow-hidden">
             <div class="flex flex-col mx-3 2xl:mx-0">
                 <div class="container mx-auto">
                     <div class="grid pb-10 text-white border-b 2xl:grid-cols-6 border-white/20 poppins-regular">
-                        <div class="grid grid-cols-1 col-span-6 gap-12 2xl:grid-cols-2 2xl:col-span-4"
-                            data-aos="fade-right">
+                        <div class="grid grid-cols-1 col-span-6 gap-12 2xl:grid-cols-2 2xl:col-span-4">
                             <div class="flex flex-col justify-between">
                                 <div class="flex flex-col gap-5">
                                     <div>
@@ -215,8 +214,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="z-10 h-full col-span-6 mt-5 2xl:relative 2xl:col-span-2 2xl:mt-0"
-                            data-aos="fade-left">
+                        <div class="z-10 h-full col-span-6 mt-5 2xl:relative 2xl:col-span-2 2xl:mt-0">
                             <div class="2xl:absolute z-20 -top-[10rem]">
                                 <div x-data="newsletterForm()" class="relative flex flex-col gap-5 px-7 py-12 bg-[#f37021] h-full">
                                     <div class="text-sm font-bold text-black uppercase 2xl:text-lg poppins-regular">

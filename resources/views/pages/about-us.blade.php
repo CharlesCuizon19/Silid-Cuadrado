@@ -17,7 +17,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-5 2xl:col-span-2" data-aos="fade-left">
+                    <div class="flex flex-col gap-5 2xl:col-span-2" data-aos="zoom-in">
                         <div class="text-sm font-bold text-black uppercase 2xl:text-base poppins-regular">
                             who we are
                         </div>
