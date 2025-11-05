@@ -32,4 +32,9 @@ class Product extends Model
     {
         return $this->belongsTo(ProductCategory::class);
     }
+
+    public function inquiries()
+    {
+        return $this->hasMany(ProductInquiry::class);
+    }
 }

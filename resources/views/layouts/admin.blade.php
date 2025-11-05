@@ -172,6 +172,22 @@
                             <span x-show="sidebarOpen" x-transition class="ml-3">Newsletters</span>
                         </a>
                     </li>
+
+                    <!-- Product Inquiries -->
+                    <li>
+                        <a href="{{ route('admin.product_inquiries.index') }}"
+                            class="flex items-center px-3 py-2 rounded-lg transition
+                            {{ request()->routeIs('admin.product_inquiries.*') ? 'bg-[#f37021]/20 text-[#f37021]' : 'hover:bg-[#f37021]/10 text-gray-300 hover:text-white' }}"
+                            :class="{ 'justify-center': !sidebarOpen, 'justify-start': sidebarOpen }">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 2h6a2 2 0 012 2v1h1a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h1V4a2 2 0 012-2zM9 9h6M9 13h6M9 17h3" />
+                            </svg>
+                            <span x-show="sidebarOpen" x-transition class="ml-3">Product Inquiries</span>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
         </div>

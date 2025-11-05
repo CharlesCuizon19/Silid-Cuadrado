@@ -8,9 +8,11 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductCategoriesController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductInquiryController;
 use App\Http\Controllers\ProjectCategoriesController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Models\ProductInquiry;
 use Illuminate\Support\Facades\Route;
 
 // Admin Authentication
@@ -30,6 +32,8 @@ Route::get('/contact-us', [PageController::class, 'contact_us'])->name('contact-
 
 Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 Route::post('/contact-us', [ContactUsController::class, 'store'])->name('contacts.store');
+Route::post('/product-inquiries', [ProductInquiryController::class, 'store'])->name('product_inquiries.store');
+
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
@@ -41,7 +45,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::resource('products', ProductController::class);
     Route::resource('newsletters', NewsletterController::class);
     Route::resource('contacts', ContactUsController::class);
-
+    Route::resource('product_inquiries', ProductInquiryController::class);
 
     Route::delete('/projects/image/{id}', [App\Http\Controllers\ProjectController::class, 'deleteImage'])
         ->name('projects.deleteImage');
@@ -50,4 +54,5 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
 
     Route::get('newsletter-export', [NewsletterController::class, 'export'])->name('newsletter.export');
     Route::get('contacts-export', [ContactUsController::class, 'export'])->name('contacts.export');
+    Route::get('product-inquiries/export', [ProductInquiryController::class, 'export'])->name('product_inquiries.export');
 });
