@@ -88,7 +88,7 @@
                         class="hidden w-full h-auto mix-blend-multiply 2xl:flex">
                     <div class="2xl:absolute inset-0 flex items-center justify-center h-full p-[2rem] 2xl:p-[5rem]">
                         <form class="w-full space-y-14 poppins-regular" x-data="contactForm()" @submit.prevent="submitForm"
-                            data-aos="fade-left">
+                            data-aos="zoom-in">
 
                             <div>
                                 <label class="block mb-1 text-lg font-bold text-black">

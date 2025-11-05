@@ -27,7 +27,7 @@
                         <div class="text-2xl 2xl:text-8xl magistral leading-[1.1] font-bold">
                             <div class="flex items-end gap-3 2xl:gap-5">
                                 <div data-aos="fade-right">{{ $firstWord }}</div>
-                                <div class="flex items-end" data-aos="fade-left">
+                                <div class="flex items-end" data-aos="zoom-in">
                                     <div
                                         class="flex bg-gradient-to-r from-[#f37021] to-transparent w-24 2xl:w-64 h-[16px] 2xl:h-[60px] mb-1 2xl:mb-2">
                                     </div>

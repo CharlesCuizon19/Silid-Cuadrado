@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="col-span-6" data-aos="fade-left">
+                        <div class="col-span-6" data-aos="zoom-in">
                             <div class="swiper myProductsSwiper max-w-[100%]">
                                 <div class="swiper-wrapper">
                                     @foreach ($products as $item)
@@ -47,10 +47,10 @@
                                             class="swiper-slide">
                                             <div class="flex flex-col gap-5 cursor-pointer group">
                                                 <div class="relative h-auto w-[414px]">
-                                                    <div class="overflow-hidden">
+                                                    <div class="overflow-hidden h-[18rem] w-full">
                                                         <img src="{{ asset($item->thumbnail ?? 'images/no-image.png') }}"
                                                             alt="{{ $item->title }}"
-                                                            class="object-cover w-full h-auto transition duration-500 ease-in-out group-hover:scale-105">
+                                                            class="object-cover w-full h-full transition duration-500 ease-in-out group-hover:scale-105">
                                                     </div>
                                                     <div
                                                         class="absolute inset-0 transition duration-500 ease-in-out opacity-0 bg-black/50 group-hover:opacity-100">

@@ -18,7 +18,6 @@
                                     <img src="{{ asset($item->image) }}" class="w-full h-[400px] object-contain" />
                                 </div>
                             @endforeach
-
                         </div>
 
                         <!-- Navigation buttons -->

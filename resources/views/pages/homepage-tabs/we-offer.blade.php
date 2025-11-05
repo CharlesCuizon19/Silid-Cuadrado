@@ -79,7 +79,7 @@
             </div>
 
             <!-- RIGHT SECTION -->
-            <div class="2xl:absolute z-30 -top-[11rem] right-0 col-span-4 2xl:col-span-1" data-aos="fade-left">
+            <div class="2xl:absolute z-30 -top-[11rem] right-0 col-span-4 2xl:col-span-1" data-aos="zoom-in">
                 <div class="relative overflow-hidden">
                     <img src="{{ asset('images/we-offer-img.png') }}" alt="Experience Image"
                         class="object-cover w-full h-full">
