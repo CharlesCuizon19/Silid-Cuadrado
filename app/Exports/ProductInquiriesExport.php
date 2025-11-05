@@ -18,7 +18,7 @@ class ProductInquiriesExport implements FromCollection, WithHeadings, WithMappin
     {
         return [
             $inquiry->id,
-            optional($inquiry->product)->name ?? 'N/A',
+            optional($inquiry->product)->title ?? 'N/A',
             $inquiry->full_name,
             $inquiry->email,
             $inquiry->phone ?? 'N/A',

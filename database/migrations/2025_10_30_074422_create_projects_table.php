@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->string('project_title')->nullable();
             $table->longText('overview')->nullable();
-            $table->string('scope_work')->nullable();
+            $table->text('scope_work')->nullable();
             $table->string('project_image')->nullable();
             $table->timestamps();
 
