@@ -1,52 +1,52 @@
 <div class="relative swiper banner-swiper mt-[103px] 2xl:mt-0 2xl:h-[65rem] 2xl:w-full h-[20rem]">
     <div class="swiper-wrapper">
         @foreach ($banners as $item)
-            @php
-                $words = explode(' ', $item->title ?? '');
-                $firstWord = array_shift($words);
-                $remaining = implode(' ', $words);
-            @endphp
+        @php
+        $words = explode(' ', $item->title ?? '');
+        $firstWord = array_shift($words);
+        $remaining = implode(' ', $words);
+        @endphp
 
-            <div class="relative swiper-slide">
-                <!-- ✅ Dynamic banner image -->
-                <img src="{{ asset($item->image ?? 'images/banner.png') }}" alt="{{ $item->title }}"
+        <div class="relative swiper-slide">
+            <!-- ✅ Dynamic banner image -->
+            <img src="{{ asset($item->image ?? 'images/banner.png') }}" alt="{{ $item->title }}"
+                class="object-cover w-full h-full">
+
+            <div class="absolute inset-0 z-10">
+                <img src="{{ asset('images/banner-sheet.png') }}" alt="Banner Overlay"
                     class="object-cover w-full h-full">
+            </div>
 
-                <div class="absolute inset-0 z-10">
-                    <img src="{{ asset('images/banner-sheet.png') }}" alt="Banner Overlay"
-                        class="object-cover w-full h-full">
-                </div>
+            <div class="absolute inset-0 z-20 w-full h-full mx-3 text-white 2xl:mx-0">
+                <div class="container flex flex-col justify-center w-full h-full gap-3 mx-auto 2xl:gap-5">
+                    <div class="text-xs 2xl:text-base font-bold poppins-regular text-[#f37021]" data-aos="zoom-in">
+                        CUSTOM-ENGINEERED RESULTS
+                    </div>
 
-                <div class="absolute inset-0 z-20 w-full h-full mx-3 text-white 2xl:mx-0">
-                    <div class="container flex flex-col justify-center w-full h-full gap-3 mx-auto 2xl:gap-5">
-                        <div class="text-xs 2xl:text-base font-bold poppins-regular text-[#f37021]" data-aos="zoom-in">
-                            CUSTOM-ENGINEERED RESULTS
-                        </div>
-
-                        <div class="text-2xl 2xl:text-8xl magistral leading-[1.1] font-bold">
-                            <div class="flex items-end gap-3 2xl:gap-5">
-                                <div data-aos="zoom-in">{{ $firstWord }}</div>
-                                <div class="flex items-end" data-aos="zoom-in">
-                                    <div
-                                        class="flex bg-gradient-to-r from-[#f37021] to-transparent w-24 2xl:w-64 h-[16px] 2xl:h-[60px] mb-1 2xl:mb-2">
-                                    </div>
+                    <div class="text-2xl 2xl:text-8xl magistral leading-[1.1] font-bold">
+                        <div class="flex items-end gap-3 2xl:gap-5">
+                            <div data-aos="zoom-in">{{ $firstWord }}</div>
+                            <div class="flex items-end" data-aos="zoom-in">
+                                <div
+                                    class="flex bg-gradient-to-r from-[#f37021] to-transparent w-24 2xl:w-64 h-[16px] 2xl:h-[60px] mb-1 2xl:mb-2">
                                 </div>
                             </div>
-                            <div class="w-[80%] 2xl:w-[50%]" data-aos="zoom-in">{{ $remaining }}</div>
                         </div>
+                        <div class="w-[80%] 2xl:w-[50%]" data-aos="zoom-in">{{ $remaining }}</div>
+                    </div>
 
-                        <div class="text-sm 2xl:text-2xl font-light poppins-regular 2xl:w-[50%] 2xl:leading-[50px]"
-                            data-aos="zoom-in">
-                            {!! $item->subtitle !!}
-                        </div>
+                    <div class="text-sm 2xl:text-2xl font-light poppins-regular 2xl:w-[50%] 2xl:leading-[50px]"
+                        data-aos="zoom-in">
+                        {!! $item->subtitle !!}
+                    </div>
 
-                        <div data-aos="zoom-in">
-                            <x-button border='border-white' link="homepage" text="Explore Services" textcolor="white"
-                                bgcolor="[#f37021]" bghovercolor="bg-[#a63e00]" />
-                        </div>
+                    <div data-aos="zoom-in">
+                        <x-button border='border-white' link="services.show" text="Explore Services" textcolor="white"
+                            bgcolor="[#f37021]" bghovercolor="bg-[#a63e00]" />
                     </div>
                 </div>
             </div>
+        </div>
         @endforeach
     </div>
 

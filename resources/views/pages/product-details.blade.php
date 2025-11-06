@@ -48,7 +48,6 @@
                                     <img src="{{ asset($item->image) }}" class="object-cover w-full h-24" />
                                 </div>
                             @endforeach
-
                         </div>
                     </div>
                 </div>
