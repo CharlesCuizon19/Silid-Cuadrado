@@ -97,6 +97,14 @@
                         </label>
                     </div>
 
+                    {{-- ✅ Google reCAPTCHA --}}
+                    <div class="mb-6">
+                        <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITEKEY') }}"></div>
+                        @error('g-recaptcha-response')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
+                    </div>
+
                     <!-- Buttons -->
                     <div class="flex items-center gap-4 mt-6">
                         <button
@@ -125,10 +133,26 @@
     </div>
 </div>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     function submitInquiry(form, closeModal) {
+        const recaptchaResponse = grecaptcha.getResponse();
+
+        // ✅ Check reCAPTCHA before submitting
+        if (!recaptchaResponse) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Please verify',
+                text: 'Confirm that you are not a robot.',
+                confirmButtonColor: '#f37021'
+            });
+            return;
+        }
+
         const formData = new FormData(form);
+        formData.append('g-recaptcha-response', recaptchaResponse);
+
         const submitUrl = "{{ route('product_inquiries.store') }}";
         const csrfToken = "{{ csrf_token() }}";
 
@@ -136,7 +160,7 @@
                 method: 'POST',
                 headers: {
                     'X-CSRF-TOKEN': csrfToken,
-                    'X-Requested-With': 'XMLHttpRequest' // ✅ Add this
+                    'X-Requested-With': 'XMLHttpRequest'
                 },
                 body: formData
             })
@@ -151,6 +175,7 @@
                         timer: 2500
                     });
                     form.reset();
+                    grecaptcha.reset(); // ✅ reset captcha
                     closeModal();
                 } else {
                     Swal.fire({

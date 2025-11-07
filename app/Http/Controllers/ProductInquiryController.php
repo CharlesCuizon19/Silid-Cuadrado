@@ -55,8 +55,26 @@ class ProductInquiryController extends Controller
                 'email' => 'required|email|max:255',
                 'phone' => 'nullable|string|max:50',
                 'message' => 'nullable|string',
+                'g-recaptcha-response' => 'required',
             ]);
 
+            // ✅ Verify reCAPTCHA with Google API
+            $response = \Illuminate\Support\Facades\Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret' => env('RECAPTCHA_SECRET_KEY'),
+                'response' => $request->input('g-recaptcha-response'),
+                'remoteip' => $request->ip(),
+            ]);
+
+            $recaptcha = $response->json();
+            if (!($recaptcha['success'] ?? false)) {
+                Log::warning('reCAPTCHA failed', ['response' => $recaptcha]);
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Please verify that you are not a robot.',
+                ]);
+            }
+
+            // ✅ Store the inquiry
             $inquiry = ProductInquiry::create($validated);
 
             Log::info('Product inquiry created successfully', ['inquiry_id' => $inquiry->id]);
@@ -83,6 +101,7 @@ class ProductInquiryController extends Controller
             return back()->with('error', 'Failed to create product inquiry.');
         }
     }
+
 
     /**
      * Display the specified inquiry.
