@@ -24,7 +24,7 @@
 <body x-data="{ sidebarOpen: true }" class="flex min-h-screen bg-[#121212] text-white">
 
     {{-- Sidebar --}}
-    <!-- Sidebar -->
+
     <aside
         :class="sidebarOpen ? 'w-64' : 'w-20'"
         class="bg-[#1a1a1a] flex-shrink-0 flex flex-col justify-between min-h-screen transition-all duration-300 shadow-lg border-r border-[#2c2c2c]">
