@@ -26,10 +26,10 @@
                 @foreach ($projects as $item)
                     <a href="{{ route('projects.details', ['id' => $item->id]) }}"
                         class="w-full h-full lg:h-[410px] group overflow-hidden cursor-pointer">
-                        <div class="relative">
+                        <div class="relative w-full h-full">
                             <img src="{{ asset($item->project_image ?? 'images/no-image.png') }}"
                                 alt="{{ $item->project_title }}"
-                                class="object-cover w-full h-auto transition duration-300 group-hover:scale-105">
+                                class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
 
                             <div class="absolute inset-0">
                                 <div

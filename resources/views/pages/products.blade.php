@@ -104,7 +104,7 @@
                     {{-- Product Grid --}}
                     <div class="grid gap-5 mt-10 md:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-y-14" data-aos="zoom-in">
                         @forelse ($products as $item)
-                            <a href="{{ route('products.details', ['id' => $item->id]) }}">
+                            <a href="{{ route('products.details', ['id' => $item->id]) }}" class=" w-fit">
                                 <div class="flex flex-col gap-5 cursor-pointer group">
                                     <div class="relative w-[500px] h-auto">
                                         <div class="overflow-hidden lg:h-[18rem]">

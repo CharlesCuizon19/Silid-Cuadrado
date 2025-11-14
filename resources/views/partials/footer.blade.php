@@ -8,8 +8,8 @@
 
             <div class="absolute bottom-0 z-20 w-full h-full mx-3 lg:inset-0 lg:mx-0">
                 <div class="container h-full mx-auto">
-                    <div class="flex justify-end h-full">
-                        <div class="flex flex-col gap-2 lg:gap-5 lg:w-[50%] mt-20 lg:mt-3 2xl:mt-20">
+                    <div class="flex justify-center h-full xl:justify-end">
+                        <div class="flex flex-col gap-2 xl:gap-5 xl:w-[50%] mt-20 lg:mt-3 2xl:mt-20">
                             <div class="uppercase text-[#f37021] text-sm lg:text-lg poppins-regular font-bold">
                                 Contact us
                             </div>

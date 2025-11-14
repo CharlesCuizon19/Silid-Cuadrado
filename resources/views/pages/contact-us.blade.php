@@ -86,7 +86,7 @@
                 </div>
                 <div class="relative bg-white">
                     <img src="{{ asset('images/contactus-bg2.png') }}" alt=""
-                        class="hidden w-full h-auto mix-blend-multiply lg:flex">
+                        class="hidden w-full h-full mix-blend-multiply lg:flex">
                     <div class="lg:absolute inset-0 flex items-center justify-center h-full p-[2rem] lg:p-[5rem]">
                         <form class="w-full space-y-14 poppins-regular" x-data="contactForm()" @submit.prevent="submitForm"
                             data-aos="zoom-in">

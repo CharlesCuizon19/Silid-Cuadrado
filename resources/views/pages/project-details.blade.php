@@ -6,7 +6,7 @@
             breadcrumb2="{!! $project->project_title !!}" img="images/project-banner.png" />
 
         <div class="container h-full py-20 mx-auto">
-            <div class="grid grid-cols-3 gap-10 xl:gap-16 poppins-regular">
+            <div class="grid grid-cols-3 gap-10 mx-3 xl:gap-16 poppins-regular">
                 <div class="flex flex-col col-span-2 gap-6">
                     <!-- Project Main Image -->
                     <div class="flex flex-col">

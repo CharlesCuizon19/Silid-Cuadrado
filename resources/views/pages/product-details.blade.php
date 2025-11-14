@@ -7,7 +7,7 @@
             breadcrumb2="{!! $product->title !!}" img='images/products-banner.png' />
 
         <div class="container h-full py-20 mx-auto space-y-16">
-            <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+            <div class="grid grid-cols-1 gap-10 mx-3 lg:grid-cols-2">
                 <!-- Product Gallery -->
                 <div class="w-full max-w-4xl mx-auto">
                     <!-- Main Swiper -->
