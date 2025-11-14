@@ -3,8 +3,8 @@
 
 @section('content')
     <div class="bg-[#f2f2f2]">
-        <x-banner page='Product Details' extension1=">" extension2=">" breadcrumb1='Products' breadcrumb2="{{ $product->name }}"
-            img='images/products-banner.png' />
+        <x-banner page='Product Details' extension1=">" extension2=">" breadcrumb1='Products'
+            breadcrumb2="{!! $product->title !!}" img='images/products-banner.png' />
 
         <div class="container h-full py-20 mx-auto space-y-16">
             <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
@@ -13,11 +13,16 @@
                     <!-- Main Swiper -->
                     <div class="relative mb-4 swiper mainSwiper">
                         <div class="swiper-wrapper">
-                            @foreach ($product->images as $item)
-                                <div class="swiper-slide">
-                                    <img src="{{ asset($item->image) }}" class="w-full h-[400px] object-contain" />
-                                </div>
-                            @endforeach
+                            @isset($product->images)
+                                @foreach ($product->images as $item)
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset($item->image) }}" class="w-full h-[400px] object-contain" />
+                                    </div>
+                                @endforeach
+                            @endisset
+                            <div>
+                                <img src="{{ asset($product->thumbnail) }}" class="w-full h-[400px] object-contain" />
+                            </div>
                         </div>
 
                         <!-- Navigation buttons -->

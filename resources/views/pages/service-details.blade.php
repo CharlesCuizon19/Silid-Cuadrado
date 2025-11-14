@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="bg-[#f2f2f2]">
-        <x-banner page='Service Details' extension1=">" extension2=">" breadcrumb1='Services' breadcrumb2="{{ $service->title }}"
-            img='images/services-banner.png' />
+        <x-banner page='Service Details' extension1=">" extension2=">" breadcrumb1='Services'
+            breadcrumb2="{!! $service->title !!}" img='images/services-banner.png' />
 
         <div class="container h-full py-20 mx-auto">
             <div class="grid grid-cols-3 gap-16 mx-3 poppins-regular">

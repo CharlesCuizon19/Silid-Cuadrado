@@ -28,7 +28,7 @@
         aria-modal="true">
 
         <div
-            class="relative z-10 w-full h-full overflow-y-scroll overflow-x-hidden max-w-3xl max-h-[90%] bg-white shadow-xl rounded-2xl">
+            class="relative z-10 w-full h-full overflow-y-scroll overflow-x-hidden max-w-3xl max-h-[85%] mt-20 bg-white shadow-xl rounded-2xl">
 
             <!-- Header -->
             <div
