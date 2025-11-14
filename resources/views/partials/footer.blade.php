@@ -1,26 +1,26 @@
 <div>
     <div class="flex flex-col">
         <div class="relative z-10 bg-[#191718]">
-            <div class="h-[20rem] 2xl:h-auto">
+            <div class="h-[20rem] lg:h-auto">
                 <img src="{{ asset('images/footer-rectangle.png') }}" alt=""
                     class="object-cover object-left w-full h-full">
             </div>
 
-            <div class="absolute bottom-0 z-20 w-full h-full mx-3 2xl:inset-0 2xl:mx-0">
+            <div class="absolute bottom-0 z-20 w-full h-full mx-3 lg:inset-0 lg:mx-0">
                 <div class="container h-full mx-auto">
                     <div class="flex justify-end h-full">
-                        <div class="flex flex-col gap-2 2xl:gap-5 2xl:w-[50%] mt-20">
-                            <div class="uppercase text-[#f37021] text-sm 2xl:text-lg poppins-regular font-bold">
+                        <div class="flex flex-col gap-2 lg:gap-5 lg:w-[50%] mt-20 lg:mt-3 2xl:mt-20">
+                            <div class="uppercase text-[#f37021] text-sm lg:text-lg poppins-regular font-bold">
                                 Contact us
                             </div>
-                            <div class="text-2xl 2xl:text-5xl leading-tight text-white magistral 2xl:w-[70%]">
+                            <div class="text-2xl lg:text-5xl leading-tight text-white magistral lg:w-[70%]">
                                 Let's Build Your Next Project Together
                             </div>
                             <div
-                                class="text-sm 2xl:text-lg font-light leading-tight text-white poppins-regular 2xl:w-[65%] mb-5">
+                                class="text-sm lg:text-lg font-light leading-tight text-white poppins-regular lg:w-[65%] mb-5">
                                 Get in touch with us today for inquiries, consultations, or project quotations.
                             </div>
-                            <div class="mx-3 2xl:mx-0">
+                            <div class="mx-3 lg:mx-0">
                                 <x-button border='border-white' link="contact-us" text="Contact Us" textcolor="white"
                                     bgcolor="[#f37021]" bghovercolor="[#f37021]/20" />
                             </div>
@@ -32,16 +32,16 @@
         </div>
 
         <div class="bg-[#121212] pt-10">
-            <div class="flex flex-col mx-3 2xl:mx-0">
+            <div class="flex flex-col mx-3 xl:mx-3 2xl:mx-0">
                 <div class="container mx-auto">
-                    <div class="grid pb-10 text-white border-b 2xl:grid-cols-6 border-white/20 poppins-regular">
-                        <div class="grid grid-cols-1 col-span-6 gap-12 2xl:grid-cols-2 2xl:col-span-4">
+                    <div class="grid pb-10 text-white border-b lg:grid-cols-6 border-white/20 poppins-regular">
+                        <div class="grid grid-cols-1 col-span-6 gap-12 lg:grid-cols-2 lg:col-span-4">
                             <div class="flex flex-col justify-between">
                                 <div class="flex flex-col gap-5">
                                     <div>
                                         <img src="{{ asset('images/logo.png') }}" alt="">
                                     </div>
-                                    <div class="text-sm leading-tight 2xl:text-base">
+                                    <div class="text-sm leading-tight lg:text-base">
                                         Building strength and shaping spaces through steel fabrication and interior
                                         fit-out
                                         solutions.
@@ -107,7 +107,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex items-center gap-3 mt-5 text-sm 2xl:mt-0 2xl:text-base">
+                                <div class="flex items-center gap-3 mt-5 text-sm lg:mt-0 lg:text-base">
                                     <div>
                                         Terms & Conditions
                                     </div>
@@ -123,7 +123,7 @@
                                 <div class="col-span-2 text-lg font-bold">
                                     Quick Links
                                 </div>
-                                <div class="grid grid-cols-2 col-span-2 text-sm font-light 2xl:text-base">
+                                <div class="grid grid-cols-2 col-span-2 text-sm font-light lg:text-base">
                                     <div class="flex flex-col gap-3">
                                         <div class="space-x-1">
                                             <span class="text-[#f37021]">></span>
@@ -158,7 +158,7 @@
                                         <div class="text-lg font-bold">
                                             Get in Touch
                                         </div>
-                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
+                                        <div class="flex items-center gap-2 text-sm font-light lg:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">
@@ -174,7 +174,7 @@
                                                 Bacoor Cavite , Bacoor, Philippines, 4102
                                             </div>
                                         </div>
-                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
+                                        <div class="flex items-center gap-2 text-sm font-light lg:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">
@@ -186,7 +186,7 @@
                                                 09 123456789
                                             </div>
                                         </div>
-                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
+                                        <div class="flex items-center gap-2 text-sm font-light lg:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">
@@ -198,7 +198,7 @@
                                                 09 987654321
                                             </div>
                                         </div>
-                                        <div class="flex items-center gap-2 text-sm font-light 2xl:text-base">
+                                        <div class="flex items-center gap-2 text-sm font-light lg:text-base">
                                             <div>
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                                     class="text-[#f37021] size-4">>
@@ -214,19 +214,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="z-10 h-full col-span-6 mt-5 2xl:relative 2xl:col-span-2 2xl:mt-0">
-                            <div class="2xl:absolute z-20 -top-[10rem]">
+                        <div class="z-10 h-full col-span-6 mt-5 lg:relative lg:col-span-2 lg:mt-0">
+                            <div class="lg:absolute z-20 -top-[10rem]">
                                 <div x-data="newsletterForm()"
                                     class="relative flex flex-col gap-5 px-7 py-12 bg-[#f37021] h-full">
-                                    <div class="text-sm font-bold text-black uppercase 2xl:text-lg poppins-regular">
+                                    <div class="text-sm font-bold text-black uppercase lg:text-lg poppins-regular">
                                         stay updated
                                     </div>
 
-                                    <div class="text-2xl leading-relaxed text-white 2xl:text-4xl magistral">
+                                    <div class="text-2xl leading-relaxed text-white lg:text-4xl magistral">
                                         Subscribe to Receive Updates and Insights on our Latest Projects
                                     </div>
 
-                                    <div class="text-sm font-light text-white 2xl:text-lg">
+                                    <div class="text-sm font-light text-white lg:text-lg">
                                         Email Address
                                     </div>
 
@@ -248,14 +248,14 @@
                                     </template>
 
                                     <img src="{{ asset('images/footer-absolute.png') }}" alt=""
-                                        class="absolute bottom-0 right-0 z-30 hidden mix-blend-multiply opacity-20 2xl:flex">
+                                        class="absolute bottom-0 right-0 z-30 hidden mix-blend-multiply opacity-20 lg:flex">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="py-10 text-sm font-light text-center text-white/50 poppins-regular 2xl:text-base">
+                <div class="py-10 text-sm font-light text-center text-white/50 poppins-regular lg:text-base">
                     © 2025 SILID CUADRADO. All Rights Reserved. Designed and Developed by <a
                         href="https://rwebsolutions.com.ph/" class="text-[#f37021] font-bold hover:underline">R Web
                         Solutions, Corp.</a>

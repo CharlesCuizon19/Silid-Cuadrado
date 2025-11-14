@@ -1,11 +1,11 @@
 <div class="py-16">
     <div class="container h-full mx-auto">
-        <div class="relative grid grid-cols-4 gap-10 mx-3 2xl:mx-0">
+        <div class="relative grid grid-cols-4 gap-10 mx-3 lg:mx-3 2xl:mx-0">
             <!-- LEFT SECTION -->
-            <div class="flex flex-col col-span-4 gap-10 2xl:col-span-3">
+            <div class="flex flex-col gap-10 md:col-span-2 lg:col-span-3">
                 <!-- Header -->
                 <div class="flex items-center justify-between" data-aos="zoom-in">
-                    <h2 class="text-3xl text-black 2xl:text-5xl magistral">We Offer</h2>
+                    <h2 class="text-3xl text-black lg:text-5xl magistral">We Offer</h2>
                     <div class="flex gap-3">
                         <!-- Prev -->
                         <div
@@ -37,15 +37,14 @@
                                     <!-- ICON or IMAGE -->
                                     @if (!empty($item->icon))
                                         <img src="{{ asset($item->icon) }}" alt="{{ $item->title }}"
-                                            class="object-contain w-16 h-16 mx-auto 2xl:w-20 2xl:h-20 spin-y-hover">
+                                            class="object-contain w-16 h-16 mx-auto lg:w-20 lg:h-20 spin-y-hover">
                                     @else
                                         <img src="{{ asset($item->img) }}" alt="{{ $item->title }}"
-                                            class="w-20 h-auto mx-auto 2xl:w-28 spin-y-hover">
+                                            class="w-20 h-auto mx-auto lg:w-28 spin-y-hover">
                                     @endif
 
                                     <!-- Content -->
-                                    <div
-                                        class="flex flex-col items-start justify-start gap-3 text-center 2xl:text-left">
+                                    <div class="flex flex-col items-start justify-start gap-3 text-center lg:text-left">
                                         <div
                                             class="text-2xl font-bold magistral-medium group-hover:text-[#f37021] transition duration-300">
                                             {{ $item->title }}
@@ -79,11 +78,10 @@
             </div>
 
             <!-- RIGHT SECTION -->
-            <div class="2xl:absolute z-30 -top-[11rem] right-0 col-span-4 2xl:col-span-1" data-aos="zoom-in">
+            <div class="lg:absolute z-30 -top-[11rem] right-0 col-span-4 md:col-span-2" data-aos="zoom-in">
                 <div class="relative overflow-hidden">
                     <img src="{{ asset('images/we-offer-img.png') }}" alt="Experience Image"
                         class="object-cover w-full h-full">
-                    <div class="absolute inset-0"></div>
 
                     <div class="absolute top-0 px-10 py-5 text-white">
                         <div class="flex flex-col gap-4">
@@ -142,7 +140,7 @@
                     slidesPerView: 1
                 },
                 768: {
-                    slidesPerView: 2
+                    slidesPerView: 1
                 },
                 1024: {
                     slidesPerView: 3

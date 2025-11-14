@@ -6,7 +6,7 @@
             breadcrumb2="{!! $project->project_title !!}" img="images/project-banner.png" />
 
         <div class="container h-full py-20 mx-auto">
-            <div class="grid grid-cols-3 gap-16 poppins-regular">
+            <div class="grid grid-cols-3 gap-10 xl:gap-16 poppins-regular">
                 <div class="flex flex-col col-span-2 gap-6">
                     <!-- Project Main Image -->
                     <div class="flex flex-col">
@@ -101,14 +101,14 @@
 
                 <!-- Sidebar -->
                 <div class="flex flex-col gap-10">
-                    <div class="flex flex-col gap-5 py-10 bg-white shadow-xl px-7 h-fit">
+                    <div class="flex flex-col gap-5 px-3 py-10 bg-white shadow-xl xl:px-7 h-fit">
                         <div class="text-lg font-bold text-black poppins-regular">
                             Other Projects
                         </div>
                         <div class="flex flex-col gap-2">
                             @foreach ($relatedProjects as $item)
                                 <a href="{{ route('projects.details', $item->id) }}"
-                                    class="flex justify-between px-5 py-3 transition duration-300 hover:bg-[#f8f8f8] group">
+                                    class="flex justify-between px-3 xl:px-5 py-3 transition duration-300 hover:bg-[#f8f8f8] group">
                                     <div class="flex items-center gap-3 ">
                                         <div class="w-[70px] h-full overflow-hidden">
                                             <img src="{{ asset($item->project_image) }}" alt=""
@@ -140,7 +140,7 @@
                                     <div class="relative z-20 text-lg font-bold text-black poppins-regular">
                                         Get In Touch
                                     </div>
-                                    <div class="relative z-20 text-4xl leading-relaxed text-white magistral">
+                                    <div class="relative z-20 text-xl leading-relaxed text-white xl:text-4xl magistral">
                                         Connect With Us for Your Next Project
                                     </div>
                                     <div class="pt-8">
@@ -159,23 +159,20 @@
                         <div class="text-lg font-bold text-black">
                             Company Brochure
                         </div>
-                        <div class="flex justify-between items-center p-4 bg-[#f37021] cursor-pointer">
+                        <a href="{{ asset('pdf/Silid-Cuadrado-Profile.pdf') }}" download
+                            class="flex justify-between items-center p-4 bg-[#f37021] cursor-pointer hover:bg-[#e3611d] transition">
                             <div class="flex flex-col gap-2">
-                                <div class="text-lg font-bold text-white">
-                                    Download
-                                </div>
-                                <div class="text-lg font-light text-white">
-                                    Silid Cuadrado Profile.pdf
-                                </div>
+                                <div class="text-lg font-bold text-white">Download</div>
+                                <div class="text-sm font-light text-white xl:text-lg">Silid Cuadrado Profile.pdf</div>
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                     class="bg-white size-12 p-2 rounded-full text-[#f37021]">
                                     <path fill="currentColor"
-                                        d="M12 11a1 1 0 0 1 1 1v6.584l1.293-1.292a1 1 0 0 1 1.414 1.416l-2.824 2.819c-.253.252-.5.473-.883.473c-.336 0-.566-.169-.788-.38l-2.919-2.912a1 1 0 0 1 1.414-1.416L11 18.584V12a1 1 0 0 1 1-1" />
+                                        d="M12 11a1 1 0 0 1 1 1v6.584l1.293-1.292a1 1 0 0 1 1.414 1.416l-2.824 2.819c-.253.252-.5.473-.883.473c-.336 0-.566-.169-.788-.38l-2.919-2.912a1 1 0 0 1 1.414-1.416L11 18.584V12a1 1 0 0 1 1-1m-.5-9c2.784 0 5.16 1.75 6.086 4.212a6.003 6.003 0 0 1 .395 11.453a3 3 0 0 0-.858-1.785a3 3 0 0 0-1.914-.873L15 15v-3a3 3 0 0 0-5.995-.176L9 12v3a3 3 0 0 0-2.123.88a3 3 0 0 0-.875 2.02A5.002 5.002 0 0 1 5 8.416A6.5 6.5 0 0 1 11.5 2" />
                                 </svg>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

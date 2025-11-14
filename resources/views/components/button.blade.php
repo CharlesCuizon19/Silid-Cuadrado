@@ -1,40 +1,40 @@
 @props([
-'text' => 'Click Me',
-'border' => '',
-'textcolor' => '',
-'bgcolor' => 'black',
-'bghovercolor' => '',
-'link' => null,
+    'text' => 'Click Me',
+    'border' => '',
+    'textcolor' => '',
+    'bgcolor' => 'black',
+    'bghovercolor' => '',
+    'link' => null,
 ])
 
 <div class="relative flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group">
     @if ($link)
-    {{-- ✅ If a route name is provided --}}
-    <a href="{{ route($link) }}"
-        class="relative z-10 overflow-hidden w-fit 2xl:px-8 px-4 py-2 2xl:py-4 flex items-center justify-center font-medium group bg-{{ $bgcolor }} transition duration-300">
-        <span class="font-light text-{{ $textcolor }} poppins-regular text-xs 2xl:text-base">
-            {{ $text }}
-        </span>
-        <span
-            class="absolute -z-10 inset-0 w-0 bg-black/50 skew-x-[-15deg] -left-4 transition-all duration-300 ease-in-out group-hover:w-[calc(100%+30px)] opacity-70"></span>
-    </a>
+        {{-- ✅ If a route name is provided --}}
+        <a href="{{ route($link) }}"
+            class="relative z-10 overflow-hidden w-fit lg:px-8 px-4 py-2 lg:py-4 flex items-center justify-center font-medium group bg-{{ $bgcolor }} transition duration-300">
+            <span class="font-light text-{{ $textcolor }} poppins-regular text-xs lg:text-base">
+                {{ $text }}
+            </span>
+            <span
+                class="absolute -z-10 inset-0 w-0 bg-black/50 skew-x-[-15deg] -left-4 transition-all duration-300 ease-in-out group-hover:w-[calc(100%+30px)] opacity-70"></span>
+        </a>
     @else
-    {{-- ✅ If no route is provided, render a button (for forms or JS triggers) --}}
-    <button type="button"
-        class="relative z-10 overflow-hidden w-fit 2xl:px-8 px-4 py-2 2xl:py-4 flex items-center justify-center font-medium group bg-{{ $bgcolor }} transition duration-300">
-        <span class="font-light text-{{ $textcolor }} poppins-regular text-xs 2xl:text-base">
-            {{ $text }}
-        </span>
-        <span
-            class="absolute -z-10 inset-0 w-0 bg-black/50 skew-x-[-15deg] -left-4 transition-all duration-300 ease-in-out group-hover:w-[calc(100%+30px)] opacity-70"></span>
-    </button>
+        {{-- ✅ If no route is provided, render a button (for forms or JS triggers) --}}
+        <button type="button"
+            class="relative z-10 overflow-hidden w-fit lg:px-8 px-4 py-2 lg:py-4 flex items-center justify-center font-medium group bg-{{ $bgcolor }} transition duration-300">
+            <span class="font-light text-{{ $textcolor }} poppins-regular text-xs lg:text-base">
+                {{ $text }}
+            </span>
+            <span
+                class="absolute -z-10 inset-0 w-0 bg-black/50 skew-x-[-15deg] -left-4 transition-all duration-300 ease-in-out group-hover:w-[calc(100%+30px)] opacity-70"></span>
+        </button>
     @endif
 
     <div
-        class="absolute w-full h-4 2xl:h-6 px-[65px] 2xl:px-[71px] {{ $border }} border-t border-l border-r group-hover:border-r-2 group-hover:border-l-2 group-hover:border-t-2 -top-1">
+        class="absolute w-full h-4 lg:h-6 px-[65px] lg:px-[71px] {{ $border }} border-t border-l border-r group-hover:border-r-2 group-hover:border-l-2 group-hover:border-t-2 -top-1">
     </div>
     <div
-        class="absolute w-full h-4 2xl:h-6 px-[65px] 2xl:px-[71px] {{ $border }} border-b border-l border-r -bottom-1 group-hover:border-b-2 group-hover:border-l-2 group-hover:border-r-2">
+        class="absolute w-full h-4 lg:h-6 px-[65px] lg:px-[71px] {{ $border }} border-b border-l border-r -bottom-1 group-hover:border-b-2 group-hover:border-l-2 group-hover:border-r-2">
     </div>
     <div
         class="absolute bottom-0 z-20 w-[6px] h-[6px] bg-{{ $textcolor }} right-1 group-hover:flex hidden transition duration-300">

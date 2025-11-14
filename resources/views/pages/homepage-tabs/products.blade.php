@@ -2,23 +2,23 @@
     <div class="relative z-10 w-full h-full bg-[#f37021]">
         <div>
             <div class="container py-20 mx-auto">
-                <div class="flex flex-col gap-5 mx-3 2xl:mx-0">
-                    <div class="text-xs font-bold uppercase 2xl:text-xl" data-aos="zoom-in">
+                <div class="flex flex-col gap-5 mx-3 lg:mx-3 2xl:mx-0">
+                    <div class="text-xs font-bold uppercase lg:text-xl" data-aos="zoom-in">
                         our products
                     </div>
 
-                    <div class="flex flex-col gap-4 mb-20 2xl:items-end 2xl:flex-row 2xl:justify-between 2xl:gap-0"
+                    <div class="flex flex-col gap-4 mb-20 lg:items-end lg:flex-row lg:justify-between lg:gap-0"
                         data-aos="zoom-in">
-                        <div class="text-2xl 2xl:text-5xl text-white magistral 2xl:w-[50%] leading-tight">
+                        <div class="text-2xl lg:text-5xl text-white magistral lg:w-[50%] leading-tight">
                             Reliable Products Built for Strength and Function
                         </div>
-                        <div class="ml-3 2xl:ml-0" data-aos="zoom-in">
+                        <div class="ml-3 lg:ml-0" data-aos="zoom-in">
                             <x-button border='border-black' link="products.show" text="All Products" textcolor="black"
                                 bgcolor="white" bghovercolor="bg-[#c7c7c7]" />
                         </div>
                     </div>
 
-                    <div class="grid items-end h-full grid-cols-1 gap-3 2xl:gap-0 2xl:grid-cols-7">
+                    <div class="grid items-end h-full grid-cols-1 gap-3 lg:gap-0 lg:grid-cols-7">
                         <div class="items-end col-span-1" data-aos="zoom-in">
                             <div class="flex gap-3">
                                 {{-- navigation --}}
@@ -113,6 +113,12 @@
                     slidesPerView: 1
                 },
                 1024: {
+                    slidesPerView: 2
+                },
+                1280: {
+                    slidesPerView: 2
+                },
+                1440: {
                     slidesPerView: 3
                 },
             },

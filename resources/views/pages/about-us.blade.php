@@ -5,26 +5,26 @@
         <x-banner page='About Us' extension1=">" breadcrumb1='About Us' img='images/aboutus-banner.png' />
 
         <div class="h-full py-20">
-            <div class="mx-3 2xl:mr-[13rem] ">
-                <div class="grid items-center grid-cols-1 gap-20 2xl:grid-cols-5">
-                    <div class="2xl:col-span-3" data-aos="zoom-in">
+            <div class="mx-3 xl:mr-[2rem] 2xl:mr-[13rem] ">
+                <div class="grid items-center grid-cols-1 gap-20 lg:grid-cols-5">
+                    <div class="lg:col-span-3" data-aos="zoom-in">
                         <div class="relative">
                             <img src="{{ asset('images/aboutus-img2.png') }}" alt="" class="w-full h-auto">
 
                             <div
-                                class="absolute top-[4rem] 2xl:top-[10rem] text-3xl 2xl:text-6xl uppercase -rotate-90 -right-10 2xl:-right-[5rem] text-[#E0E0E0]/60 magistral">
+                                class="absolute top-[4rem] xl:top-[5rem] 2xl:top-[10rem] text-3xl xl:text-4xl 2xl:text-6xl uppercase -rotate-90 -right-10 xl:-right-[3rem] 2xl:-right-[5rem] text-[#E0E0E0]/60 magistral">
                                 experts
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-5 2xl:col-span-2" data-aos="zoom-in">
-                        <div class="text-sm font-bold text-black uppercase 2xl:text-base poppins-regular">
+                    <div class="flex flex-col gap-5 lg:col-span-2" data-aos="zoom-in">
+                        <div class="text-sm font-bold text-black uppercase lg:text-base poppins-regular">
                             who we are
                         </div>
-                        <div class="text-2xl 2xl:text-5xl text-[#f37021] magistral leading-tight">
+                        <div class="text-2xl lg:text-5xl text-[#f37021] magistral leading-tight">
                             Forging Strength and Innovation in Every Build
                         </div>
-                        <div class="text-sm leading-loose text-black 2xl:text-lg poppins-regular">
+                        <div class="text-sm leading-loose text-black lg:text-lg poppins-regular">
                             <span class="font-bold">
                                 SILID CUADRADO ENGINEERING SERVICES
                             </span>
@@ -32,7 +32,7 @@
                             HVAC and airconditioning systems, electrical works, and interior fit-out projects.
                         </div>
                         <div
-                            class="border-l-4 border-[#f37021] bg-gradient-to-r from-[#f37021]/60 to-transparent p-5 leading-loose poppins-regular text-sm 2xl:text-lg">
+                            class="border-l-4 border-[#f37021] bg-gradient-to-r from-[#f37021]/60 to-transparent p-5 leading-loose poppins-regular text-sm lg:text-lg">
                             Founded with a vision to deliver quality and precision, we take pride in providing clients with
                             durable, efficient, and custom-engineered solutions that meet the demands of modern
                             construction.
@@ -57,7 +57,7 @@
 
         <div class="h-full my-14">
             <div class="relative bg-[#f37021]">
-                <div class="h-[30rem] 2xl:h-auto 2xl:w-auto w-full">
+                <div class="h-[30rem] lg:h-auto lg:w-auto w-full">
                     <img src="{{ asset('images/aboutus-rectangle.png') }}" alt=""
                         class="object-cover w-full h-full mix-blend-multiply">
                 </div>
@@ -65,30 +65,28 @@
                 <div class="absolute inset-0">
                     <div class="container flex items-center justify-center h-full mx-auto">
                         <div
-                            class="grid justify-around h-full grid-cols-1 mx-5 text-center 2xl:justify-between w-fit 2xl:w-full 2xl:h-fit 2xl:grid-cols-3 2xl:mx-0">
-                            <div
-                                class="flex flex-col items-center justify-center gap-3 border-black 2xl:border-r magistral">
-                                <div class="text-5xl text-white 2xl:text-7xl count-up" data-target="300">
+                            class="grid justify-around h-full grid-cols-1 mx-5 text-center lg:justify-between w-fit lg:w-full lg:h-fit lg:grid-cols-3 lg:mx-0">
+                            <div class="flex flex-col items-center justify-center gap-3 border-black lg:border-r magistral">
+                                <div class="text-5xl text-white lg:text-7xl count-up" data-target="300">
                                     <span class="count-value">0</span><span class="count-suffix">+</span>
                                 </div>
-                                <div class="text-2xl text-white 2xl:text-4xl">
+                                <div class="text-2xl text-white lg:text-4xl">
                                     Projects Completed
                                 </div>
                             </div>
-                            <div
-                                class="flex flex-col items-center justify-center gap-3 border-black 2xl:border-r magistral">
-                                <div class="text-5xl text-white 2xl:text-7xl count-up" data-target="100">
+                            <div class="flex flex-col items-center justify-center gap-3 border-black lg:border-r magistral">
+                                <div class="text-5xl text-white lg:text-7xl count-up" data-target="100">
                                     <span class="count-value">0</span><span class="count-suffix">+</span>
                                 </div>
-                                <div class="text-2xl text-white 2xl:text-4xl">
+                                <div class="text-2xl text-white lg:text-4xl">
                                     Satisfied Clients
                                 </div>
                             </div>
                             <div class="flex flex-col items-center justify-center gap-3 magistral">
-                                <div class="text-5xl text-white 2xl:text-7xl count-up" data-target="10000">
+                                <div class="text-5xl text-white lg:text-7xl count-up" data-target="10000">
                                     <span class="count-value">0</span><span class="count-suffix">+</span>
                                 </div>
-                                <div class="text-2xl text-white 2xl:text-4xl">
+                                <div class="text-2xl text-white lg:text-4xl">
                                     Sqm Built Spaces
                                 </div>
                             </div>
@@ -100,12 +98,12 @@
 
         <div class="h-full py-16">
             <div class="container h-full mx-auto">
-                <div class="grid grid-cols-1 gap-10 mx-3 2xl:mx-0 2xl:grid-cols-2">
+                <div class="grid grid-cols-1 gap-10 mx-3 xl:mx-3 2xl:mx-0 lg:grid-cols-2">
                     <div class="flex flex-col gap-5" data-aos="zoom-in">
-                        <div class="text-sm font-bold uppercase 2xl:text-lg poppins-regular">
+                        <div class="text-sm font-bold uppercase lg:text-lg poppins-regular">
                             mission & vision
                         </div>
-                        <div class=" magistral text-2xl 2xl:text-5xl leading-tight text-[#f37021] w-[80%] mb-5">
+                        <div class=" magistral text-2xl lg:text-5xl leading-tight text-[#f37021] w-[80%] mb-5">
                             Crafting Excellence and Growth
                         </div>
                         <div>
@@ -116,13 +114,14 @@
                     <div class="grid grid-cols-1 gap-5">
                         <div class="flex gap-5 p-5 border rounded-lg" data-aos="zoom-in">
                             <div>
-                                <img src="{{ asset('images/mission.png') }}" alt="" class="w-[320px] h-12 2xl:w-52">
+                                <img src="{{ asset('images/mission.png') }}" alt=""
+                                    class="w-[320px] h-auto lg:w-52">
                             </div>
                             <div class="flex flex-col gap-5">
                                 <div class="uppercase text-2xl text-[#383838] magistral">
                                     our mission
                                 </div>
-                                <div class="text-base leading-loose 2xl:text-lg poppins-regular">
+                                <div class="text-base leading-loose lg:text-lg poppins-regular">
                                     To deliver high-quality, custom-fabricated steel and metal solutions for panel boards
                                     and cable trays, exceeding client expectations and enhancing the efficiency of
                                     electrical and mechanical projects. We prioritize precision, safety, and sustainability,
@@ -133,13 +132,13 @@
 
                         <div class="flex gap-5 p-5 border rounded-lg" data-aos="zoom-in">
                             <div>
-                                <img src="{{ asset('images/vision.png') }}" alt="" class="w-[320px] h-12 2xl:w-52">
+                                <img src="{{ asset('images/vision.png') }}" alt="" class="w-[320px] h-auto lg:w-52">
                             </div>
                             <div class="flex flex-col gap-5">
                                 <div class="uppercase text-2xl text-[#383838] magistral">
                                     our vision
                                 </div>
-                                <div class="text-base leading-loose 2xl:text-lg poppins-regular">
+                                <div class="text-base leading-loose lg:text-lg poppins-regular">
                                     To deliver high-quality, custom-fabricated steel and metal solutions for panel boards
                                     and cable trays, exceeding client expectations and enhancing the efficiency of
                                     electrical and mechanical projects. We prioritize precision, safety, and sustainability,
@@ -152,29 +151,24 @@
             </div>
         </div>
 
-        <div class="h-full 2xl:h-full">
-            <div class=" bg-[#f1f1f1] relative h-full py-20 2xl:py-0">
-                <div class="w-full h-full">
-                    <img src="{{ asset('images/aboutus-img4.png') }}" alt=""
-                        class="hidden object-cover w-full h-full mix-blend-multiply 2xl:flex">
-                </div>
-
-                <div class="inset-0 h-full 2xl:absolute">
+        <div class="h-full lg:h-full">
+            <div class=" bg-[#f1f1f1] relative z-10 h-full py-20 xl:py-10 2xl:py-20">
+                <div class="inset-0 h-full">
                     <div class="container h-full mx-auto text-center">
                         <div class="flex flex-col items-center justify-center h-full gap-24">
                             <div class="flex flex-col items-center justify-center gap-5 text-center">
-                                <div class="text-sm font-bold uppercase 2xl:text-lg poppins-regular">
+                                <div class="text-sm font-bold uppercase lg:text-lg poppins-regular">
                                     core values
                                 </div>
-                                <div class="text-[#f37021] text-2xl 2xl:text-6xl magistral w-[60%]">
+                                <div class="text-[#f37021] text-2xl lg:text-6xl magistral w-[60%]">
                                     Driven by Quality and Progress
                                 </div>
-                                <div class="text-sm 2xl:text-xl poppins-regular">
+                                <div class="text-sm lg:text-xl poppins-regular">
                                     Delivering products that meet the highest industry standards.
                                 </div>
                             </div>
 
-                            <div class="hidden 2xl:flex">
+                            <div class="hidden lg:flex">
                                 <div class="grid w-full grid-cols-4">
                                     <div class="flex justify-center">
                                         <img src="{{ asset('images/corevalue1.png') }}" alt="">
@@ -306,7 +300,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex flex-col gap-10 2xl:hidden">
+                            <div class="flex flex-col gap-10 lg:hidden">
                                 <div class="grid grid-cols-1">
                                     <div class="flex justify-center">
                                         <img src="{{ asset('images/corevalue1.png') }}" alt="">
@@ -443,6 +437,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="inset-0 w-full h-full -z-10 lg:absolute">
+                    <img src="{{ asset('images/aboutus-img4.png') }}" alt=""
+                        class="hidden object-cover w-full h-full mix-blend-multiply lg:flex">
+                </div>
+
             </div>
         </div>
     </div>

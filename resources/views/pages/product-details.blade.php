@@ -7,7 +7,7 @@
             img='images/products-banner.png' />
 
         <div class="container h-full py-20 mx-auto space-y-16">
-            <div class="grid grid-cols-1 gap-10 2xl:grid-cols-2">
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
                 <!-- Product Gallery -->
                 <div class="w-full max-w-4xl mx-auto">
                     <!-- Main Swiper -->
@@ -69,7 +69,7 @@
                     <x-product-inquiry-modal :product="$product" />
                 </div>
             </div>
-            <div>
+            <div class="mx-3">
                 <div x-data="{ tab: 'overview' }" class="w-full poppins-regular">
                     <!-- Tab Buttons -->
                     <div class="flex gap-6 border-b border-gray-200">
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col poppins-regular">
+            <div class="flex flex-col mx-3 poppins-regular">
                 <div class="mb-3 text-lg font-bold">
                     Get in Touch:
                 </div>

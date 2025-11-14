@@ -4,7 +4,7 @@
     <div class="bg-[#f2f2f2] min-h-screen">
         <x-banner page='Our Projects' extension1=">" breadcrumb1='Projects' img='images/project-banner.png' />
 
-        <div class="pt-20 pb-52">
+        <div class="pt-20 mx-3 pb-52">
             <div class="container mx-auto">
                 <div class="flex flex-col gap-3 poppins-regular">
                     {{-- Info text --}}
@@ -75,10 +75,10 @@
                         @foreach ($projects as $item)
                             <a href="{{ route('projects.details', ['id' => $item->id]) }}"
                                 class="w-full h-[410px] group overflow-hidden block">
-                                <div class="relative">
+                                <div class="relative h-full">
                                     <img src="{{ asset($item->project_image ?? 'images/placeholder.jpg') }}"
                                         alt="{{ $item->project_title }}"
-                                        class="object-cover w-full h-auto transition duration-300 group-hover:scale-105">
+                                        class="object-cover w-full h-full transition duration-300 group-hover:scale-105">
                                     <div
                                         class="absolute inset-0 transition-all duration-300 opacity-0 bg-gradient-to-t from-black to-transparent group-hover:opacity-100">
                                     </div>

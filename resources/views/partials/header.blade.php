@@ -8,12 +8,12 @@
 
         <!-- Logo -->
         <a href="/" class="z-50 flex items-center space-x-3">
-            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-[300px] 2xl:w-[458px] h-auto">
+            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-[300px] lg:w-[458px] h-auto">
         </a>
 
         <!-- Burger button (mobile only) -->
         <button @click="open = !open"
-            class="z-50 flex flex-col items-end justify-center w-8 h-8 space-y-1 md:hidden focus:outline-none">
+            class="z-50 flex flex-col items-end justify-center w-8 h-8 space-y-1 lg:hidden focus:outline-none">
             <span :class="open ? 'w-6 rotate-45 translate-y-[6px]' : 'w-6'"
                 class="h-[2px] bg-white transition-all duration-300"></span>
             <span :class="open ? 'opacity-0' : 'opacity-100'"
@@ -23,7 +23,7 @@
         </button>
 
         <!-- Desktop Navigation -->
-        <nav class="items-center hidden space-x-8 md:flex ">
+        <nav class="items-center hidden space-x-8 lg:flex ">
             <div class="items-center hidden space-x-12 md:flex">
                 <a href="{{ route('homepage') }}"
                     class="transition hover:text-[#f37021] poppins-regular {{ Route::is('homepage') ? 'font-bold text-[#f37021]' : 'font-light' }}">Home</a>
@@ -58,7 +58,7 @@
         x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
         x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-4"
-        class="absolute top-0 left-0 z-40 w-full bg-black/95 backdrop-blur-md md:hidden">
+        class="absolute top-0 left-0 z-40 w-full bg-black/95 backdrop-blur-md lg:hidden">
         <div class="flex flex-col items-center justify-center h-full py-[10rem] space-y-6">
             <a href="{{ route('homepage') }}"
                 class="transition hover:text-[#f37021] poppins-regular text-md {{ Route::is('homepage') ? 'font-bold text-[#f37021]' : 'font-light' }}">Home</a>

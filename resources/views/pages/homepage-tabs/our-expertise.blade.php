@@ -1,6 +1,6 @@
-<div class="mx-3 2xl:mx-0">
-    <div class="container grid grid-cols-1 gap-12 py-24 mx-auto 2xl:grid-cols-2">
-        <div class="grid grid-cols-2 gap-4 2xl:gap-7" data-aos="zoom-in">
+<div class="mx-3 lg:mx-3 2xl:mx-0">
+    <div class="container grid grid-cols-1 gap-12 py-24 mx-auto lg:grid-cols-2">
+        <div class="grid grid-cols-2 gap-4 lg:gap-7" data-aos="zoom-in">
             <div class="col-span-2">
                 <img src="{{ asset('images/expertise-img1.png') }}" alt="" class="w-full h-auto">
             </div>
@@ -14,14 +14,14 @@
                 <img src="{{ asset('images/expertise-img4.png') }}" alt="" class="w-full h-auto">
             </div>
         </div>
-        <div class="flex flex-col gap-3 2xl:justify-between 2xl:gap-0" data-aos="zoom-in">
-            <div class="text-xs font-bold uppercase 2xl:text-lg poppins-regular">
+        <div class="flex flex-col gap-5 xl:justify-between xl:gap-5" data-aos="zoom-in">
+            <div class="text-xs font-bold uppercase lg:text-lg poppins-regular">
                 our expertise
             </div>
-            <div class="text-2xl 2xl:text-6xl text-[#f37021] magistral leading-tight">
+            <div class="text-2xl lg:text-6xl text-[#f37021] magistral leading-tight">
                 Comprehensive Services for Every Project
             </div>
-            <div class="text-sm leading-relaxed 2xl:text-xl poppins-regular">
+            <div class="text-sm leading-relaxed lg:text-xl poppins-regular">
                 <span class="font-bold">SILID CUADRADO ENGINEERING SERVICES</span>
                 provides a full range of engineering and construction services — from steel fabrication and HVAC systems
                 to
@@ -31,7 +31,7 @@
             </div>
             <x-button border='border-black' link="services.show" text="View All Services" textcolor="white"
                 bgcolor="[#f37021]" bghovercolor="[#a63e00]" />
-            <div class="mt-5 2xl:mt-0">
+            <div class="mt-5 lg:mt-0">
                 <img src="{{ asset('images/video-thumbnail.png') }}" alt="" class="w-full h-auto">
             </div>
         </div>

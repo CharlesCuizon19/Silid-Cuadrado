@@ -4,7 +4,7 @@
     <div>
         <x-banner page='Our Services' extension1=">" breadcrumb1='Services' img='images/services-banner.png' />
 
-        <div class="container h-full pt-20 mx-auto pb-36" data-aos="zoom-in">
+        <div class="container h-full pt-20 mx-3 2xl:mx-auto pb-36" data-aos="zoom-in">
             <div class="grid grid-cols-3 gap-5 mt-10 gap-y-16 gap-x-10">
                 @forelse ($services as $item)
                     <a href="{{ route('services.details', ['id' => $item->id]) }}">

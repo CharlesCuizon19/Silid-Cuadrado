@@ -4,7 +4,7 @@
     <div class="bg-[#f2f2f2] h-full">
         <x-banner page='All Products' extension1=">" breadcrumb1='Products' img='images/products-banner.png' />
 
-        <div class="pt-20 pb-52">
+        <div class="pt-20 mx-3 pb-52">
             <div class="container mx-auto">
                 <div class="flex flex-col gap-3 poppins-regular">
 
@@ -13,7 +13,7 @@
                     </div>
 
                     {{-- Filter + Sort + Search --}}
-                    <form method="GET" class="flex justify-between relative z-[9999]" data-aos="zoom-in">
+                    <form method="GET" class="relative z-30 flex justify-between" data-aos="zoom-in">
                         <div class="flex gap-2">
                             {{-- Category Dropdown --}}
                             <div x-data="multiSelect(@js($categories), @js(request('categories', [])))" class="relative">
@@ -102,15 +102,15 @@
                     </form>
 
                     {{-- Product Grid --}}
-                    <div class="grid grid-cols-3 gap-5 mt-10 gap-y-14" data-aos="zoom-in">
+                    <div class="grid gap-5 mt-10 md:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-y-14" data-aos="zoom-in">
                         @forelse ($products as $item)
                             <a href="{{ route('products.details', ['id' => $item->id]) }}">
                                 <div class="flex flex-col gap-5 cursor-pointer group">
                                     <div class="relative w-[500px] h-auto">
-                                        <div class="overflow-hidden 2xl:h-[18rem]">
+                                        <div class="overflow-hidden lg:h-[18rem]">
                                             <img src="{{ asset($item->thumbnail ?? 'images/default-product.png') }}"
                                                 alt="{{ $item->title }}"
-                                                class="object-cover w-full h-full transition duration-500 ease-in-out group-hover:scale-105">
+                                                class="object-cover w-full h-[20rem] transition duration-500 ease-in-out group-hover:scale-105">
                                         </div>
                                         <div
                                             class="absolute inset-0 transition duration-500 ease-in-out opacity-0 bg-black/50 group-hover:opacity-100">

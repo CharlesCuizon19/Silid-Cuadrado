@@ -1,17 +1,17 @@
-<div class="relative mx-3 2xl:mx-0">
+<div class="relative mx-3 lg:mx-3 xl:mx-3 2xl:mx-0">
     <div class="container mx-auto">
         <div class="flex flex-col">
-            <div class="grid grid-cols-1 2xl:grid-cols-2 gap-7">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7">
                 <div class="flex flex-col gap-5" data-aos="zoom-in">
-                    <div class="text-xs font-bold uppercase 2xl:text-lg poppins-regular">
+                    <div class="text-xs font-bold uppercase lg:text-lg poppins-regular">
                         featured projects
                     </div>
-                    <div class="text-2xl 2xl:text-5xl text-[#f37021] magistral leading-tight">
+                    <div class="text-2xl lg:text-5xl text-[#f37021] magistral leading-tight">
                         Showcasing Strength and Design in Every Build
                     </div>
                 </div>
-                <div class="flex flex-col gap-5 2xl:justify-between 2xl:gap-0" data-aos="zoom-in">
-                    <div class="text-sm 2xl:text-xl poppins-regular">
+                <div class="flex flex-col gap-5 lg:justify-between lg:gap-5 2xl:gap-0" data-aos="zoom-in">
+                    <div class="text-sm lg:text-xl poppins-regular">
                         From large-scale steel fabrication works to customized interior fit-outs, each project reflects
                         our commitment to durability, functionality, and style.
                     </div>
@@ -22,10 +22,10 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-5 pt-10 pb-24 2xl:pt-24 2xl:grid-cols-2" data-aos="zoom-in">
+            <div class="grid grid-cols-1 gap-5 pt-10 pb-24 lg:pt-24 lg:grid-cols-2" data-aos="zoom-in">
                 @foreach ($projects as $item)
                     <a href="{{ route('projects.details', ['id' => $item->id]) }}"
-                        class="w-full h-full 2xl:h-[410px] group overflow-hidden cursor-pointer">
+                        class="w-full h-full lg:h-[410px] group overflow-hidden cursor-pointer">
                         <div class="relative">
                             <img src="{{ asset($item->project_image ?? 'images/no-image.png') }}"
                                 alt="{{ $item->project_title }}"
