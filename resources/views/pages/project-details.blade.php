@@ -7,7 +7,7 @@
 
         <div class="container h-full py-20 mx-auto">
             <div class="grid grid-cols-3 gap-10 mx-3 xl:gap-16 poppins-regular">
-                <div class="flex flex-col col-span-2 gap-6">
+                <div class="flex flex-col col-span-3 gap-6 lg:col-span-2">
                     <!-- Project Main Image -->
                     <div class="flex flex-col">
                         <img src="{{ asset($project->project_image) }}" alt="">
@@ -100,7 +100,7 @@
                 </div>
 
                 <!-- Sidebar -->
-                <div class="flex flex-col gap-10">
+                <div class="flex flex-col col-span-3 gap-10 lg:col-span-1">
                     <div class="flex flex-col gap-5 px-3 py-10 bg-white shadow-xl xl:px-7 h-fit">
                         <div class="text-lg font-bold text-black poppins-regular">
                             Other Projects
@@ -108,7 +108,7 @@
                         <div class="flex flex-col gap-2">
                             @foreach ($relatedProjects as $item)
                                 <a href="{{ route('projects.details', $item->id) }}"
-                                    class="flex justify-between px-3 xl:px-5 py-3 transition duration-300 hover:bg-[#f8f8f8] group">
+                                    class="flex justify-between items-center px-3 xl:px-5 py-3 transition duration-300 hover:bg-[#f8f8f8] group">
                                     <div class="flex items-center gap-3 ">
                                         <div class="w-[70px] h-full overflow-hidden">
                                             <img src="{{ asset($item->project_image) }}" alt=""
@@ -117,7 +117,7 @@
                                         <div
                                             class="text-black flex flex-col magistral-medium group-hover:text-[#f37021] transition duration-300">
                                             <span class="text-[#f37021] text-sm poppins-regular font-bold">
-                                                {{ $item->category->name ?? '' }}
+                                                {{ $item->category->category_name ?? '' }}
                                             </span>
                                             <span class="line-clamp-2">
                                                 {{ $item->project_title }}

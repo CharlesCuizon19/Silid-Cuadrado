@@ -13,7 +13,8 @@
                     </div>
 
                     {{-- Filter + Sort + Search --}}
-                    <form method="GET" class="relative z-30 flex justify-between" data-aos="zoom-in">
+                    <form method="GET" class="relative z-30 flex flex-col gap-5 lg:justify-between lg:flex-row"
+                        data-aos="zoom-in">
                         <div class="flex gap-2">
                             {{-- Category Dropdown --}}
                             <div x-data="multiSelect(@js($categories), @js(request('categories', [])))" class="relative">
@@ -106,8 +107,8 @@
                         @forelse ($products as $item)
                             <a href="{{ route('products.details', ['id' => $item->id]) }}" class=" w-fit">
                                 <div class="flex flex-col gap-5 cursor-pointer group">
-                                    <div class="relative w-[500px] h-auto">
-                                        <div class="overflow-hidden lg:h-[18rem]">
+                                    <div class="relative w-auto h-[20rem]">
+                                        <div class="h-full overflow-hidden">
                                             <img src="{{ asset($item->thumbnail ?? 'images/default-product.png') }}"
                                                 alt="{{ $item->title }}"
                                                 class="object-cover w-full h-[20rem] transition duration-500 ease-in-out group-hover:scale-105">

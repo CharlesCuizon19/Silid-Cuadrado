@@ -8,7 +8,7 @@
         <div class="container h-full py-20 mx-auto">
             <div class="grid grid-cols-3 gap-16 mx-3 poppins-regular">
                 <!-- 🟠 Left Content -->
-                <div class="flex flex-col col-span-2 gap-6">
+                <div class="flex flex-col col-span-3 gap-6 lg:col-span-2">
                     <!-- Thumbnail -->
                     @if ($service->thumbnail)
                         <img src="{{ asset($service->thumbnail) }}" alt="{{ $service->title }}"
@@ -98,7 +98,7 @@
                 </div>
 
                 <!-- 🟠 Right Sidebar -->
-                <div class="flex flex-col gap-10">
+                <div class="flex flex-col col-span-3 gap-10 lg:col-span-1">
                     <!-- Other Services -->
                     <div class="flex flex-col gap-5 py-10 bg-white shadow-xl px-7 h-fit">
                         <div class="text-lg font-bold text-black poppins-regular">

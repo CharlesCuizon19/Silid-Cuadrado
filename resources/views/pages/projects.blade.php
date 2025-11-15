@@ -71,7 +71,7 @@
 
 
                     {{-- Projects Grid --}}
-                    <div class="grid grid-cols-2 gap-5 mt-10" data-aos="zoom-in">
+                    <div class="grid grid-cols-1 gap-5 mt-10 lg:grid-cols-2" data-aos="zoom-in">
                         @foreach ($projects as $item)
                             <a href="{{ route('projects.details', ['id' => $item->id]) }}"
                                 class="w-full h-[410px] group overflow-hidden block">

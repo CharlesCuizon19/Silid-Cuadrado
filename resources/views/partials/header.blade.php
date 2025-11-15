@@ -8,7 +8,7 @@
 
         <!-- Logo -->
         <a href="/" class="z-50 flex items-center space-x-3">
-            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-[300px] lg:w-[458px] h-auto">
+            <img src="/images/logo.png" alt="Silid Cuadrado Logo" class="w-[200px] md:w-[300px] lg:w-[458px] h-auto">
         </a>
 
         <!-- Burger button (mobile only) -->

@@ -2,7 +2,7 @@
     <div class="container h-full mx-auto">
         <div class="relative grid grid-cols-4 gap-10 mx-3 lg:mx-3 2xl:mx-0">
             <!-- LEFT SECTION -->
-            <div class="flex flex-col gap-10 md:col-span-2 lg:col-span-3">
+            <div class="flex flex-col col-span-4 gap-10 md:col-span-2 lg:col-span-3">
                 <!-- Header -->
                 <div class="flex items-center justify-between" data-aos="zoom-in">
                     <h2 class="text-3xl text-black lg:text-5xl magistral">We Offer</h2>

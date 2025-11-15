@@ -11,10 +11,10 @@
         @foreach ($products as $item)
             <a href="{{ route('products.details', ['id' => $item->id]) }}" class="swiper-slide">
                 <div class="flex flex-col gap-5 cursor-pointer group">
-                    <div class="relative h-auto w-[490px]">
-                        <div class="overflow-hidden">
+                    <div class="relative w-auto h-[20rem]">
+                        <div class="h-full overflow-hidden">
                             <img src="{{ asset($item->thumbnail) }}" alt=""
-                                class="object-cover w-full h-auto transition duration-500 ease-in-out group-hover:scale-105">
+                                class="object-cover w-full h-full transition duration-500 ease-in-out group-hover:scale-105">
                         </div>
                         <div
                             class="absolute inset-0 transition duration-500 ease-in-out opacity-0 bg-black/50 group-hover:opacity-100">
