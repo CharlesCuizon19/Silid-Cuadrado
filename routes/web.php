@@ -34,6 +34,9 @@ Route::post('/newsletter', [NewsletterController::class, 'store'])->name('newsle
 Route::post('/contact-us', [ContactUsController::class, 'store'])->name('contacts.store');
 Route::post('/product-inquiries', [ProductInquiryController::class, 'store'])->name('product_inquiries.store');
 
+Route::get('/terms-and-conditions', [PageController::class, 'terms_and_conditions'])->name('terms-and-conditions');
+Route::get('/privacy-policy', [PageController::class, 'privacy_policy'])->name('privacy-policy');
+
 
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');

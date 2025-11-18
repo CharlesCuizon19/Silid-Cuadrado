@@ -178,4 +178,12 @@ class PageController extends Controller
     {
         return view('pages.contact-us');
     }
+    public function terms_and_conditions()
+    {
+        return view('pages.terms-and-conditions');
+    }
+    public function privacy_policy()
+    {
+        return view('pages.privacy-policy');
+    }
 }

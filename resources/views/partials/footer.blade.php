@@ -108,15 +108,15 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-3 mt-5 text-sm lg:mt-0 lg:text-base">
-                                    <div>
+                                    <a href="{{ route('terms-and-conditions') }}" class="hover:text-[#f37021]">
                                         Terms & Conditions
-                                    </div>
+                                    </a>
                                     <div class="text-xl text-[#f37021] font-bold">
                                         .
                                     </div>
-                                    <div>
+                                    <a href="{{ route('privacy-policy') }}" class="hover:text-[#f37021]">
                                         Privacy Policy
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="grid grid-cols-2 gap-3">
@@ -183,7 +183,7 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                09 123456789
+                                                0912 345 6789
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 text-sm font-light lg:text-base">
@@ -195,7 +195,7 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                09 987654321
+                                                0998 765 4321
                                             </div>
                                         </div>
                                         <div class="flex items-center gap-2 text-sm font-light lg:text-base">
