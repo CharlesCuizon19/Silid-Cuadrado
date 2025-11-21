@@ -14,46 +14,51 @@
                     </div>
 
                     {{-- Filter + Search (unchanged) --}}
-                    <div class="relative z-30 flex items-center justify-between" data-aos="zoom-in">
-                        <div class="flex gap-2">
-                            <div x-data="multiSelect()" class="relative">
-                                <button @click="toggleDropdown"
-                                    class="flex items-center justify-between px-4 py-3 bg-white rounded-md shadow-sm w-60 hover:bg-gray-50">
-                                    <div class="flex flex-wrap items-center gap-1 text-lg text-gray-800">
-                                        <template x-if="selected.length === 0">
-                                            <span>All Projects</span>
-                                        </template>
-                                        <template x-for="(item, index) in selected" :key="item">
-                                            <div class="flex items-center gap-1 bg-gray-100 px-2 py-0.5 rounded">
-                                                <span x-text="item"></span>
-                                                <button @click.stop="remove(item)"
-                                                    class="text-xs text-gray-500 hover:text-gray-700">✕</button>
-                                            </div>
-                                        </template>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2 text-gray-500 shrink-0"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7" />
-                                    </svg>
-                                </button>
-                                <div x-show="open" @click.outside="open = false" x-transition
-                                    class="absolute left-0 z-[9999] w-full mt-2 bg-white border border-gray-200 rounded-md shadow-lg text-start">
-                                    <ul class="py-1 text-gray-700 text-md">
-                                        <template x-for="option in options" :key="option">
-                                            <li>
-                                                <button @click="toggle(option)"
-                                                    class="flex items-center justify-between w-full px-4 py-2 text-start hover:bg-gray-100">
-                                                    <span x-text="option"></span>
-                                                    <span class="w-2.5 h-2.5 rounded-full border border-gray-300"
-                                                        :class="selected.includes(option) ? 'bg-[#f37021] border-[#f37021]' : ''">
-                                                    </span>
-                                                </button>
-                                            </li>
-                                        </template>
-                                    </ul>
+                    <form method="GET" id="filterForm" class="relative z-30 flex items-center justify-between gap-2"
+                        data-aos="zoom-in">
+
+                        {{-- Category Dropdown --}}
+                        <div x-data="multiSelect()" class="relative">
+                            <button type="button" @click="toggleDropdown"
+                                class="flex items-center justify-between px-4 py-3 bg-white rounded-md shadow-sm w-60 hover:bg-gray-50">
+                                <div class="flex flex-wrap items-center gap-1 text-lg text-gray-800">
+                                    <template x-if="selected.length === 0">
+                                        <span>All Projects</span>
+                                    </template>
+                                    <template x-for="(item, index) in selected" :key="item">
+                                        <div class="flex items-center gap-1 bg-gray-100 px-2 py-0.5 rounded">
+                                            <span x-text="item"></span>
+                                            <button type="button" @click.stop="remove(item)"
+                                                class="text-xs text-gray-500 hover:text-gray-700">✕</button>
+                                        </div>
+                                    </template>
                                 </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2 text-gray-500 shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div x-show="open" @click.outside="open = false" x-transition
+                                class="absolute left-0 z-[9999] w-full mt-2 bg-white border border-gray-200 rounded-md shadow-lg text-start">
+                                <ul class="py-1 text-gray-700 text-md">
+                                    <template x-for="option in options" :key="option">
+                                        <li>
+                                            <button type="button" @click="toggle(option)"
+                                                class="flex items-center justify-between w-full px-4 py-2 text-start hover:bg-gray-100">
+                                                <span x-text="option"></span>
+                                                <span class="w-2.5 h-2.5 rounded-full border border-gray-300"
+                                                    :class="selected.includes(option) ? 'bg-[#f37021] border-[#f37021]' : ''">
+                                                </span>
+                                            </button>
+                                        </li>
+                                    </template>
+                                </ul>
                             </div>
+                            <!-- Hidden inputs for each selected category -->
+                            <template x-for="cat in selected" :key="cat">
+                                <input type="hidden" name="categories[]" :value="cat">
+                            </template>
                         </div>
 
                         {{-- Search --}}
@@ -64,10 +69,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
                             </svg>
-                            <input type="text" placeholder="Search for a project..."
+                            <input type="text" name="search" placeholder="Search for a product..."
+                                value="{{ request('search') }}"
                                 class="w-full px-3 py-1 text-base text-gray-700 placeholder-gray-400 bg-transparent border-none focus:outline-none" />
                         </div>
-                    </div>
+                    </form>
+
 
 
                     {{-- Projects Grid --}}
@@ -102,7 +109,8 @@
                     <div class="flex items-center justify-center gap-6 mt-16">
                         {{-- See Less --}}
                         @if ($page > 1)
-                            <a href="?page={{ $page - 1 }}">
+                            <a
+                                href="{{ $projects->appends(['categories' => $selectedCategories, 'search' => $search])->previousPageUrl() }}">
                                 <div
                                     class="relative flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group">
                                     <div
@@ -127,7 +135,8 @@
 
                         {{-- Load More --}}
                         @if ($page < $lastPage)
-                            <a href="?page={{ $page + 1 }}">
+                            <a
+                                href="{{ $projects->appends(['categories' => $selectedCategories, 'search' => $search])->nextPageUrl() }}">
                                 <div
                                     class="relative flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group">
                                     <div
@@ -159,7 +168,7 @@
         function multiSelect() {
             return {
                 open: false,
-                selected: [],
+                selected: @json($selectedCategories),
                 options: @json($categories),
                 toggleDropdown() {
                     this.open = !this.open;
@@ -170,9 +179,15 @@
                     } else {
                         this.selected.push(option);
                     }
+                    this.$nextTick(() => {
+                        document.getElementById('filterForm').submit();
+                    });
                 },
                 remove(option) {
                     this.selected = this.selected.filter(i => i !== option);
+                    this.$nextTick(() => {
+                        document.getElementById('filterForm').submit();
+                    });
                 },
             };
         }

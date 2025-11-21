@@ -9,8 +9,8 @@
             <div class="grid grid-cols-3 gap-10 mx-3 xl:gap-16 poppins-regular">
                 <div class="flex flex-col col-span-3 gap-6 lg:col-span-2">
                     <!-- Project Main Image -->
-                    <div class="flex flex-col">
-                        <img src="{{ asset($project->project_image) }}" alt="">
+                    <div class="flex flex-col w-auto h-[30rem]">
+                        <img src="{{ asset($project->project_image) }}" alt="" class="object-cover w-full h-full">
                     </div>
 
                     <!-- Category and Name -->
