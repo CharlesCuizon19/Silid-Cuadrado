@@ -17,53 +17,44 @@
                         data-aos="zoom-in">
                         <div class="flex gap-2">
                             {{-- Category Dropdown --}}
-                            <div x-data="multiSelect(@js($categories), @js(request('categories', [])))" class="relative">
-                                <button @click="toggleDropdown" type="button"
-                                    class="flex items-center justify-between px-4 py-3 bg-white rounded-md shadow-sm w-60 hover:bg-gray-50">
-                                    <div class="flex flex-wrap items-center gap-1 text-lg text-gray-800">
-                                        <template x-if="selected.length === 0">
-                                            <span>Category</span>
-                                        </template>
-                                        <template x-for="(item, index) in selected" :key="item">
-                                            <div class="flex items-center gap-1 bg-gray-100 px-2 py-0.5 rounded">
-                                                <span x-text="item"></span>
-                                                <button @click.stop="remove(item)"
-                                                    class="text-xs text-gray-500 hover:text-gray-700">✕</button>
-                                            </div>
-                                        </template>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2 text-gray-500 shrink-0"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div x-data="singleSelect(@js($categories), '{{ request('category', '') }}')" class="relative">
+                                <button @click="open = !open" type="button"
+                                    class="flex items-center justify-between w-full px-4 py-3 bg-white rounded-md shadow-sm hover:bg-gray-50">
+
+                                    <span class="text-lg text-gray-800" x-text="selected || 'Category'"></span>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </button>
-                                <div x-show="open" @click.outside="open = false" x-transition
-                                    class="absolute left-0 z-[9999] mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-60">
+
+                                <div x-show="open" @click.outside="open = false"
+                                    class="absolute left-0 z-[9999] w-40 mt-2 bg-white rounded-md shadow-lg">
                                     <ul class="py-1 text-lg text-gray-700">
-                                        <template x-for="option in options" :key="option">
+                                        @foreach ($categories as $cat)
                                             <li>
-                                                <button type="button" @click="toggle(option)"
-                                                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100">
-                                                    <span x-text="option"></span>
-                                                    <span class="w-2.5 h-2.5 rounded-full border border-gray-300"
-                                                        :class="selected.includes(option) ? 'bg-[#f37021] border-[#f37021]' : ''">
-                                                    </span>
+                                                <button type="submit" @click="select('{{ $cat }}')"
+                                                    class="block w-full px-4 py-2 text-left hover:bg-gray-100"
+                                                    :class="selected === '{{ $cat }}' ? 'bg-gray-100 font-medium' : ''">
+                                                    {{ $cat }}
                                                 </button>
                                             </li>
-                                        </template>
+                                        @endforeach
                                     </ul>
                                 </div>
-                                <template x-for="value in selected">
-                                    <input type="hidden" name="categories[]" :value="value">
-                                </template>
+
+                                <!-- Hidden input to submit the selected category -->
+                                <input type="hidden" name="category" :value="selected">
                             </div>
+
 
                             {{-- Sort Dropdown --}}
                             <div x-data="{ open: false }" class="relative">
                                 <button @click="open = !open" type="button"
-                                    class="flex items-center justify-between w-40 px-4 py-3 bg-white rounded-md shadow-sm hover:bg-gray-50">
-                                    <span class="text-lg text-gray-800">
+                                    class="flex items-center justify-between w-full px-4 py-3 bg-white rounded-md shadow-sm hover:bg-gray-50">
+                                    <span class="text-lg text-gray-800 ">
                                         Sort by {{ ucfirst(request('sort', '')) ?: '' }}
                                     </span>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" fill="none"
@@ -73,7 +64,7 @@
                                     </svg>
                                 </button>
                                 <div x-show="open" @click.outside="open = false"
-                                    class="absolute left-0 z-[9999] w-40 mt-2 bg-white border border-gray-200 rounded-md shadow-lg">
+                                    class="absolute left-0 z-[9999] w-40 mt-2 bg-white rounded-md shadow-lg">
                                     <ul class="py-1 text-lg text-gray-700">
                                         @foreach (['newest' => 'Newest', 'oldest' => 'Oldest', 'a-z' => 'A–Z', 'z-a' => 'Z–A'] as $key => $label)
                                             <li>
@@ -167,6 +158,19 @@
                 remove(option) {
                     this.selected = this.selected.filter(i => i !== option);
                 },
+            };
+        }
+
+        function singleSelect(options = [], selectedInitial = '') {
+            return {
+                open: false,
+                options: options,
+                selected: selectedInitial,
+
+                select(option) {
+                    this.selected = option;
+                    this.open = false;
+                }
             };
         }
     </script>

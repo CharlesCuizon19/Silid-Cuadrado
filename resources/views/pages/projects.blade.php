@@ -14,7 +14,7 @@
                     </div>
 
                     {{-- Filter + Search (unchanged) --}}
-                    <div class="flex items-center justify-between" data-aos="zoom-in">
+                    <div class="relative z-30 flex items-center justify-between" data-aos="zoom-in">
                         <div class="flex gap-2">
                             <div x-data="multiSelect()" class="relative">
                                 <button @click="toggleDropdown"
@@ -107,7 +107,8 @@
                                     class="relative flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group">
                                     <div
                                         class="relative z-10 flex items-center justify-center px-8 py-4 overflow-hidden font-medium text-black transition duration-300 bg-black w-fit group">
-                                        <span class="font-light text-white poppins-regular text-nowrap"> See Less </span>
+                                        <span class="font-light text-white poppins-regular text-nowrap"> Previous
+                                        </span>
                                         <span
                                             class="absolute -z-10 inset-0 w-0 bg-white/50 skew-x-[-15deg] -left-4 transition-all duration-300 ease-in-out group-hover:w-[calc(100%+30px)] opacity-70"></span>
                                     </div>
@@ -131,7 +132,7 @@
                                     class="relative flex items-center justify-center px-1 transition duration-300 cursor-pointer w-fit group">
                                     <div
                                         class="relative z-10 overflow-hidden w-fit px-8 py-4 flex items-center justify-center font-medium text-black group bg-[#f37021] transition duration-300">
-                                        <span class="font-light text-white poppins-regular text-nowrap"> Load More </span>
+                                        <span class="font-light text-white poppins-regular text-nowrap"> Next </span>
                                         <span
                                             class="absolute -z-10 inset-0 w-0 bg-black/50 skew-x-[-15deg] -left-4 transition-all duration-300 ease-in-out group-hover:w-[calc(100%+30px)] opacity-70"></span>
                                     </div>

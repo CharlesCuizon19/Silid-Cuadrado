@@ -43,7 +43,7 @@ class PageController extends Controller
     public function products(Request $request)
     {
         // Filters
-        $selectedCategories = $request->input('categories', []);
+        $selectedCategories = $request->input('categories');
         $search = $request->input('search');
         $sort = $request->input('sort');
 
@@ -67,7 +67,8 @@ class PageController extends Controller
         $products = $query->paginate($perPage);
 
         // For filter UI
-        $categories = ProductCategory::pluck('category_name');
+        $categories = ProductCategory::pluck('category_name')->unique()
+            ->values();
 
         return view('pages.products', [
             'products' => $products,
@@ -140,7 +141,7 @@ class PageController extends Controller
         $total = $projects->total();
 
         // --- Get all categories for the dropdown ---
-        $categories = ProjectCategory::pluck('category_name');
+        $categories = ProjectCategory::pluck('category_name')->unique()->values();;
 
         return view('pages.projects', [
             'projects' => $projects,
